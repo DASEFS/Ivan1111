@@ -3,154 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan.miller | Sustainable Fashion Magazine</title>
-    <meta name="description" content="Ivan.miller is a sustainable fashion magazine blending European editorial style with Korean minimalism. Discover taste, outfits and aesthetics for global readers.">
-    <meta name="keywords" content="sustainable fashion magazine, fashion magazine, sustainable fashion, outfits, aesthetics, taste, Ivan.miller, minimalist fashion, European style, Korean fashion">
-    <meta name="author" content="Ivan.miller">
+    <title>Sean's STORE | Luxury Sustainable Fashion & Lifestyle</title>
+    <meta name="description" content="Sean's STORE — Curated luxury fashion, sustainable style and editorial aesthetics. Discover tasteful outfits and timeless design for the modern connoisseur.">
+    <meta name="keywords" content="sustainable fashion magazine, luxury fashion, Sean's STORE, curated style, minimalist outfits, sustainable lifestyle, editorial fashion, taste aesthetics">
+    <meta name="author" content="Sean's STORE">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="./">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Ivan.miller | Sustainable Fashion Magazine">
-    <meta property="og:description" content="Sustainable fashion magazine — taste, outfits, aesthetics. European editorial × Korean minimalism.">
-    <meta property="og:image" content="assets/logo.png">
-    <meta property="og:site_name" content="Ivan.miller">
+    <meta property="og:title" content="Sean's STORE | Luxury Sustainable Fashion">
+    <meta property="og:description" content="Curated luxury fashion, sustainable style and editorial aesthetics.">
+    <meta property="og:image" content="assets/logo.jpg">
+    <meta property="og:site_name" content="Sean's STORE">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ivan.miller | Sustainable Fashion Magazine">
-    <meta name="twitter:description" content="Sustainable fashion magazine — taste, outfits, aesthetics.">
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <meta name="twitter:title" content="Sean's STORE | Luxury Sustainable Fashion">
+    <meta name="twitter:description" content="Curated luxury fashion and editorial aesthetics.">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Magazine",
-        "name": "Ivan.miller",
-        "description": "Sustainable fashion magazine blending European editorial style with Korean minimalism.",
+        "@type": "Store",
+        "name": "Sean's STORE",
+        "description": "Curated luxury fashion, sustainable style and editorial aesthetics.",
         "url": "./",
-        "logo": "assets/logo.png",
-        "image": "assets/logo.png",
+        "logo": "assets/logo.jpg",
+        "image": "assets/logo.jpg",
         "inLanguage": ["en", "zh-CN"],
-        "publisher": {
-            "@type": "Organization",
-            "name": "Ivan.miller",
-            "logo": { "@type": "ImageObject", "url": "assets/logo.png" }
-        },
+        "address": { "@type": "PostalAddress", "addressCountry": "CN" },
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+86-183-6388-2260",
             "contactType": "customer service",
             "email": "EstheerEagler@gmail.com",
             "availableLanguage": ["English", "Chinese"]
-        }
+        },
+        "openingHours": "Mo-Su 09:00-21:00",
+        "priceRange": "$$$"
     }
     </script>
+
     <!-- ANALYTICS_CODE_PLACEHOLDER -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-inner">
-            <a href="#home" class="nav-logo">Ivan<span>.</span>miller</a>
+            <a href="#home" class="nav-logo">
+                <img src="assets/logo.jpg" alt="Sean's STORE">
+                <span class="nav-logo-text">Sean's <span>STORE</span></span>
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
-                <li><a href="#magazine" data-i18n="nav_magazine">Magazine</a></li>
-                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#editorial" data-i18n="nav_editorial">Editorial</a></li>
+                <li><a href="#story" data-i18n="nav_story">Story</a></li>
+                <li><a href="#collection" data-i18n="nav_collection">Collection</a></li>
                 <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-                <li><a href="#privacy" data-i18n="nav_privacy">Privacy</a></li>
             </ul>
-            <div style="display:flex;align-items:center;gap:12px;">
+            <div class="nav-actions">
                 <button class="lang-btn" id="langBtn" onclick="toggleLang()">中文 / EN</button>
-                <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+                <button class="hamburger" onclick="openMobileMenu()"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#home" onclick="toggleMobileMenu()" data-i18n="nav_home">Home</a>
-        <a href="#magazine" onclick="toggleMobileMenu()" data-i18n="nav_magazine">Magazine</a>
-        <a href="#about" onclick="toggleMobileMenu()" data-i18n="nav_about">About</a>
-        <a href="#contact" onclick="toggleMobileMenu()" data-i18n="nav_contact">Contact</a>
-        <a href="#privacy" onclick="toggleMobileMenu()" data-i18n="nav_privacy">Privacy</a>
+        <button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+        <a href="#home" onclick="closeMobileMenu()" data-i18n="nav_home">Home</a>
+        <a href="#editorial" onclick="closeMobileMenu()" data-i18n="nav_editorial">Editorial</a>
+        <a href="#story" onclick="closeMobileMenu()" data-i18n="nav_story">Story</a>
+        <a href="#collection" onclick="closeMobileMenu()" data-i18n="nav_collection">Collection</a>
+        <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav_contact">Contact</a>
     </div>
 
+    <!-- Hero -->
     <section class="hero" id="home">
-        <div class="hero-logo">
-            <img src="assets/logo.png" alt="Ivan.miller — Sustainable Fashion Magazine Logo">
+        <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-logo-wrap reveal-scale">
+                <img src="assets/logo.jpg" alt="Sean's STORE Logo">
+            </div>
+            <p class="hero-eyebrow reveal" data-i18n="hero_eyebrow">Curated Luxury · Sustainable Style</p>
+            <h1 class="hero-title reveal">
+                <span data-i18n="hero_title_line1">Where Taste Meets</span><br>
+                <em data-i18n="hero_title_line2">Timeless Elegance</em>
+            </h1>
+            <p class="hero-subtitle reveal" data-i18n="hero_subtitle">A curated destination for the modern connoisseur — sustainable fashion, editorial aesthetics, and pieces that tell a story.</p>
+            <a href="#editorial" class="hero-cta reveal">
+                <span data-i18n="hero_cta">Explore the Collection</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
-        <p class="hero-tagline" data-i18n="hero_tagline">Sustainable Fashion Magazine</p>
-        <div class="pillars">
-            <div class="pillar-card">
-                <div class="pillar-icon"><i class="fas fa-gem"></i></div>
-                <h3 data-i18n="pillar_taste">Taste</h3>
-                <p data-i18n="pillar_taste_desc">Refined curation of high-end fashion with a discerning eye for quality and detail.</p>
-            </div>
-            <div class="pillar-card">
-                <div class="pillar-icon"><i class="fas fa-shirt"></i></div>
-                <h3 data-i18n="pillar_outfits">Outfits</h3>
-                <p data-i18n="pillar_outfits_desc">Wearable styling inspiration that bridges European elegance with Korean minimalism.</p>
-            </div>
-            <div class="pillar-card">
-                <div class="pillar-icon"><i class="fas fa-palette"></i></div>
-                <h3 data-i18n="pillar_aesthetics">Aesthetics</h3>
-                <p data-i18n="pillar_aesthetics_desc">An art-infused visual philosophy that celebrates beauty in every silhouette and shade.</p>
-            </div>
-        </div>
-        <div class="hero-scroll"></div>
-    </section>
-
-    <section class="section" id="magazine" style="background:var(--white);">
-        <div class="container">
-            <h2 class="section-title" data-i18n="magazine_title">Latest Stories</h2>
-            <p class="section-subtitle" data-i18n="magazine_subtitle">Editorial · Style · Culture</p>
-            <div class="magazine-grid" id="articleGrid"></div>
+        <div class="hero-scroll-indicator">
+            <span data-i18n="hero_scroll">Scroll</span>
+            <div class="hero-scroll-line"></div>
         </div>
     </section>
 
-    <section class="section" id="about">
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span class="marquee-item">Sustainable Fashion</span>
+            <span class="marquee-item">Editorial Curation</span>
+            <span class="marquee-item">Timeless Design</span>
+            <span class="marquee-item">Artistic Aesthetics</span>
+            <span class="marquee-item">Luxury Lifestyle</span>
+            <span class="marquee-item">Sustainable Fashion</span>
+            <span class="marquee-item">Editorial Curation</span>
+            <span class="marquee-item">Timeless Design</span>
+            <span class="marquee-item">Artistic Aesthetics</span>
+            <span class="marquee-item">Luxury Lifestyle</span>
+        </div>
+    </div>
+
+    <!-- Editorial -->
+    <section class="section editorial-section" id="editorial">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="assets/logo.png" alt="Ivan.miller Brand" style="width:100%;height:100%;object-fit:cover;opacity:0.85;">
-                </div>
-                <div class="about-content">
-                    <h2 data-i18n="about_title">About Ivan.miller</h2>
-                    <p data-i18n="about_p1">Ivan.miller is a cross-border sustainable fashion magazine that merges the bold editorial spirit of European fashion with the serene minimalism of Korean design. We believe fashion should be thoughtful, timeless, and kind to the planet.</p>
-                    <p data-i18n="about_p2">Every story we publish is curated through three lenses — Taste, Outfits, and Aesthetics — delivering content that inspires conscious dressing and artistic living for readers across mainland China and the rest of the world.</p>
-                    <div class="about-stats">
-                        <div><div class="stat-num" id="statArticles">0</div><div class="stat-label" data-i18n="about_stat_articles">Articles</div></div>
-                        <div><div class="stat-num">2</div><div class="stat-label" data-i18n="about_stat_lang">Languages</div></div>
-                        <div><div class="stat-num">12h</div><div class="stat-label" data-i18n="about_stat_reply">Reply Time</div></div>
-                    </div>
-                </div>
+            <div class="reveal">
+                <span class="section-label" data-i18n="editorial_label">Featured Editorial</span>
+                <h2 class="section-title">Stories That <em data-i18n="editorial_title_em">Inspire</em></h2>
+                <p class="section-desc" data-i18n="editorial_desc">Curated narratives at the intersection of fashion, art, and conscious living.</p>
             </div>
+            <div class="editorial-grid" id="editorialGrid"></div>
         </div>
     </section>
 
-    <section class="section" id="contact" style="background:var(--white);">
+    <!-- Brand Story -->
+    <section class="section story-section" id="story">
         <div class="container">
-            <h2 class="section-title" data-i18n="contact_title">Get In Touch</h2>
-            <p class="section-subtitle" data-i18n="contact_subtitle">We'd love to hear from you</p>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                        <div><h4>WhatsApp</h4><a href="https://wa.me/8618363882260" target="_blank" rel="noopener">+86 183 6388 2260</a></div>
+            <div class="story-grid">
+                <div class="story-images reveal-left">
+                    <div class="story-img-main">
+                        <img src="assets/logo.jpg" alt="Sean's STORE Brand Story">
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div><h4 data-i18n="contact_email_label">Email</h4><a href="mailto:EstheerEagler@gmail.com">EstheerEagler@gmail.com</a></div>
+                    <div class="story-img-sub">
+                        <img src="assets/logo.jpg" alt="Sean's STORE Detail">
                     </div>
-                    <div class="response-promise">
-                        <div class="icon"><i class="fas fa-clock"></i></div>
-                        <div><h4 data-i18n="contact_promise_title">12-Hour Reply Promise</h4><p data-i18n="contact_promise_desc">Online consultation available anytime. We guarantee a response within 12 hours.</p></div>
-                    </div>
+                    <div class="story-badge">Est. 2026</div>
                 </div>
-                <div class="map-container" id="mapContainer">
-                    <div class="map-placeholder">
-                        <div style="text-align:center;">
-                            <i class="fas fa-map-marker-alt" style="font-size:2rem;color:var(--primary-dark);margin-bottom:12px;"></i>
-                            <p data-i18n="contact_map_placeholder">Google Maps — embed your location here</p>
+                <div class="story-content reveal-right">
+                    <span class="section-label" data-i18n="story_label">Our Story</span>
+                    <h2 class="section-title">Born from a <em data-i18n="story_title_em">Passion</em> for Beauty</h2>
+                    <p class="story-text" data-i18n="story_p1">Sean's STORE was founded on a simple belief — that true luxury lies in intention. Every piece we curate is chosen for its craftsmanship, its story, and its respect for the planet.</p>
+                    <p class="story-text" data-i18n="story_p2">We bridge European editorial refinement with minimalist Asian aesthetics, creating a space where taste is not just seen, but felt.</p>
+                    <div class="story-features">
+                        <div class="story-feature">
+                            <span class="story-feature-num">01</span>
+                            <div class="story-feature-text">
+                                <h4 data-i18n="story_f1_title">Curated Taste</h4>
+                                <p data-i18n="story_f1_desc">Every item hand-selected by our editorial team for quality and character.</p>
+                            </div>
+                        </div>
+                        <div class="story-feature">
+                            <span class="story-feature-num">02</span>
+                            <div class="story-feature-text">
+                                <h4 data-i18n="story_f2_title">Sustainable Ethos</h4>
+                                <p data-i18n="story_f2_desc">Prioritizing eco-conscious brands and timeless design over fast fashion.</p>
+                            </div>
+                        </div>
+                        <div class="story-feature">
+                            <span class="story-feature-num">03</span>
+                            <div class="story-feature-text">
+                                <h4 data-i18n="story_f3_title">Artistic Vision</h4>
+                                <p data-i18n="story_f3_desc">Infusing every collection with gallery-worthy aesthetics and cultural narrative.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -158,11 +177,120 @@
         </div>
     </section>
 
-    <section class="section" id="privacy">
+    <!-- Collection / Products -->
+    <section class="section collection-section" id="collection">
         <div class="container">
-            <div class="privacy-content">
+            <div class="collection-header">
+                <div class="reveal">
+                    <span class="section-label" data-i18n="collection_label">The Collection</span>
+                    <h2 class="section-title">Pieces Worth <em data-i18n="collection_title_em">Keeping</em></h2>
+                </div>
+                <a href="#contact" class="hero-cta reveal" style="padding:12px 28px;font-size:0.72rem;">
+                    <span data-i18n="collection_cta">Inquire Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="collection-grid" id="collectionGrid"></div>
+        </div>
+    </section>
+
+    <!-- Stats Band -->
+    <div class="stats-band">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-num" id="statProducts">0</div>
+                    <div class="stat-label" data-i18n="stat_products">Curated Pieces</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-num">2</div>
+                    <div class="stat-label" data-i18n="stat_lang">Languages</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-num">12h</div>
+                    <div class="stat-label" data-i18n="stat_reply">Reply Time</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label" data-i18n="stat_sustainable">Sustainable Focus</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial -->
+    <section class="section testimonial-section">
+        <div class="container">
+            <div class="testimonial-wrap reveal">
+                <p class="testimonial-quote" data-i18n="testimonial_text">Sean's STORE has completely redefined how I approach my wardrobe. Every piece feels intentional, every story feels personal. This is not just shopping — it's curating a life of beauty.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar"><img src="assets/logo.jpg" alt="Customer"></div>
+                    <div>
+                        <div class="testimonial-name" data-i18n="testimonial_name">Elena Marchetti</div>
+                        <div class="testimonial-role" data-i18n="testimonial_role">Fashion Editor, Milan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="reveal-left">
+                    <span class="section-label" data-i18n="contact_label">Get in Touch</span>
+                    <h2 class="section-title">Let's Create <em data-i18n="contact_title_em">Together</em></h2>
+                    <p class="section-desc" data-i18n="contact_desc">Whether you're seeking styling advice, collaboration opportunities, or have a question about our collection — we're here to help.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <h4 data-i18n="contact_whatsapp">WhatsApp</h4>
+                                <a href="https://wa.me/8618363882260" target="_blank" rel="noopener">+86 183 6388 2260</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4 data-i18n="contact_email">Email</h4>
+                                <a href="mailto:EstheerEagler@gmail.com">EstheerEagler@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4 data-i18n="contact_hours">Hours</h4>
+                                <p data-i18n="contact_hours_text">Monday — Sunday · 9:00 — 21:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="response-promise">
+                        <div class="icon"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h4 data-i18n="contact_promise_title">12-Hour Reply Promise</h4>
+                            <p data-i18n="contact_promise_desc">Online consultation available anytime. We guarantee a personal response within 12 hours.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map reveal-right">
+                    <div class="map-placeholder">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p data-i18n="contact_map_placeholder">Google Maps — embed your store location here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section class="section privacy-section" id="privacy">
+        <div class="container">
+            <div class="privacy-content reveal">
                 <h2 data-i18n="privacy_title">Privacy Policy</h2>
-                <p data-i18n="privacy_intro">At Ivan.miller, we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and safeguard your information.</p>
+                <p data-i18n="privacy_intro">At Sean's STORE, we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and safeguard your information.</p>
                 <h3 data-i18n="privacy_h1">1. Information We Collect</h3>
                 <p data-i18n="privacy_h1_desc">We may collect contact information you voluntarily provide (such as your name, email, or WhatsApp number) when you reach out to us. We also collect anonymous analytics data to improve your browsing experience.</p>
                 <h3 data-i18n="privacy_h2">2. Use of Cookies</h3>
@@ -180,24 +308,35 @@
                 <p data-i18n="privacy_h5_desc">You have the right to access, correct, or delete your personal data, and to withdraw consent at any time. To exercise these rights, please contact us.</p>
                 <h3 data-i18n="privacy_h6">6. Contact Us</h3>
                 <p data-i18n="privacy_h6_desc">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:EstheerEagler@gmail.com">EstheerEagler@gmail.com</a> or via WhatsApp at +86 183 6388 2260.</p>
-                <p style="margin-top:32px;font-size:0.78rem;color:var(--text-light);" data-i18n="privacy_lastupdate">Last updated: August 2026</p>
+                <p style="margin-top:32px;font-size:0.78rem;color:var(--text-muted);" data-i18n="privacy_lastupdate">Last updated: August 2026</p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3>Ivan.miller</h3>
-                    <p data-i18n="footer_brand_desc">Sustainable fashion magazine — where European editorial meets Korean minimalism.</p>
+                    <div class="footer-brand-logo">
+                        <img src="assets/logo.jpg" alt="Sean's STORE">
+                        <h3>Sean's <span>STORE</span></h3>
+                    </div>
+                    <p data-i18n="footer_brand_desc">Curated luxury fashion and sustainable lifestyle. Where taste meets timeless elegance.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/8618363882260" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:EstheerEagler@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4 data-i18n="footer_nav">Navigate</h4>
+                    <h4 data-i18n="footer_navigate">Navigate</h4>
                     <ul>
                         <li><a href="#home" data-i18n="nav_home">Home</a></li>
-                        <li><a href="#magazine" data-i18n="nav_magazine">Magazine</a></li>
-                        <li><a href="#about" data-i18n="nav_about">About</a></li>
+                        <li><a href="#editorial" data-i18n="nav_editorial">Editorial</a></li>
+                        <li><a href="#story" data-i18n="nav_story">Story</a></li>
+                        <li><a href="#collection" data-i18n="nav_collection">Collection</a></li>
                         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                     </ul>
                 </div>
@@ -206,6 +345,7 @@
                     <ul>
                         <li><a href="https://wa.me/8618363882260" target="_blank" rel="noopener">WhatsApp: +86 183 6388 2260</a></li>
                         <li><a href="mailto:EstheerEagler@gmail.com">EstheerEagler@gmail.com</a></li>
+                        <li data-i18n="footer_hours">Mon — Sun · 9:00 — 21:00</li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -217,28 +357,35 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; <span id="footerYear"></span> Ivan.miller. <span data-i18n="footer_rights">All rights reserved.</span></span>
-                <span data-i18n="footer_made">Crafted with taste & aesthetics.</span>
+                <span>&copy; <span id="footerYear"></span> Sean's STORE. <span data-i18n="footer_rights">All rights reserved.</span></span>
+                <span data-i18n="footer_made">Curated with taste & elegance.</span>
             </div>
         </div>
     </footer>
 
+    <!-- Cookie Banner -->
     <div class="cookie-banner" id="cookieBanner">
+        <h4 data-i18n="cookie_title">We Value Your Privacy</h4>
         <p><span data-i18n="cookie_text">We use cookies to enhance your browsing experience and analyze site traffic. By continuing, you agree to our </span><a href="#privacy" data-i18n="cookie_link">Privacy Policy</a>.</p>
         <div class="cookie-btns">
             <button class="cookie-btn decline" onclick="handleCookie(false)" data-i18n="cookie_decline">Decline</button>
-            <button class="cookie-btn accept" onclick="handleCookie(true)" data-i18n="cookie_accept">Accept</button>
+            <button class="cookie-btn accept" onclick="handleCookie(true)" data-i18n="cookie_accept">Accept All</button>
         </div>
     </div>
 
+    <!-- Article Modal -->
     <div class="modal-overlay" id="articleModal" onclick="closeModal(event)">
+        <button class="modal-close" onclick="closeArticleModal()"><i class="fas fa-times"></i></button>
         <div class="modal">
-            <button class="modal-close" onclick="closeArticleModal()"><i class="fas fa-times"></i></button>
             <div class="modal-cover" id="modalCover"></div>
             <div class="modal-body">
-                <div class="article-meta"><span id="modalCategory"></span><span id="modalDate"></span></div>
+                <span class="modal-cat" id="modalCategory"></span>
                 <h2 id="modalTitle"></h2>
-                <div class="article-content" id="modalContent"></div>
+                <div class="modal-meta">
+                    <span id="modalDate"></span>
+                    <span>Sean's STORE Editorial</span>
+                </div>
+                <div class="modal-content" id="modalContent"></div>
             </div>
         </div>
     </div>
