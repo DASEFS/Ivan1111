@@ -1,729 +1,286 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China Jewelry Manufacturer | Your Reliable Jewelry Wholesale & Custom Partner</title>
-    <meta name="description" content="Professional China jewelry manufacturer offering custom jewelry wholesale, fashion jewelry, silver jewelry, zircon jewelry, OEM/ODM for Europe, Middle East and global markets.">
-    <meta name="keywords" content="China jewelry manufacturer, custom jewelry wholesale, fashion jewelry supplier, middle east jewelry, european american jewelry, silver jewelry factory, OEM ODM jewelry">
-    <meta name="author" content="Jewelry Factory">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.yourdomain.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="China Jewelry Manufacturer | Your Reliable Jewelry Wholesale & Custom Partner">
-    <meta property="og:description" content="Professional China jewelry manufacturer offering custom jewelry wholesale for Europe, Middle East and global markets.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yourdomain.com/">
+<title>Ivan Miller Fashion Magazine</title>
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Manufacturer",
-        "name": "Jewelry Factory",
-        "description": "Professional China jewelry manufacturer for Europe and Middle East market, OEM & ODM custom jewelry wholesale.",
-        "url": "https://www.yourdomain.com",
-        "telephone": "+8618363882260",
-        "email": "EstheerEagler@gmail.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "CN",
-            "addressLocality": "Your City"
-        },
-        "sameAs": []
-    }
-    </script>
+<style>
 
-    <!-- Google Analytics (replace GA_TRACK_ID with your ID) -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACK_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_TRACK_ID');
-    </script>
-    -->
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0F3460',
-                        'primary-dark': '#0A2540',
-                        'primary-light': '#1A4A7A',
-                        accent: '#FF7800',
-                        'accent-dark': '#E66A00',
-                        'accent-light': '#FF9A3D'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        .lang-ar { direction: rtl; }
-        .carousel-slide { display: none; }
-        .carousel-slide.active { display: block; animation: fadeIn 0.8s ease; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .whatsapp-float {
-            position: fixed; bottom: 24px; right: 24px; z-index: 999;
-            width: 56px; height: 56px; background: #25D366; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            color: white; font-size: 28px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            transition: transform 0.2s;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        .nav-link { position: relative; }
-        .nav-link::after {
-            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
-            background: #FF7800; transition: width 0.3s;
-        }
-        .nav-link:hover::after { width: 100%; }
-        /* Cookie Banner */
-        .cookie-banner {
-            position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
-            background: rgba(10,37,64,0.95); backdrop-filter: blur(10px);
-            color: white; padding: 16px 24px;
-            transform: translateY(100%); transition: transform 0.4s ease;
-        }
-        .cookie-banner.show { transform: translateY(0); }
-    </style>
+body{
+background:#faf8f5;
+color:#111;
+}
+
+header{
+padding:30px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #ddd;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+letter-spacing:3px;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#111;
+font-size:15px;
+}
+
+
+.hero{
+height:75vh;
+background:
+linear-gradient(
+rgba(0,0,0,.35),
+rgba(0,0,0,.35)
+),
+url("https://images.unsplash.com/photo-1483985988355-763728e1935b")
+center/cover;
+
+display:flex;
+align-items:center;
+padding:8%;
+color:white;
+}
+
+
+.hero h1{
+font-size:65px;
+max-width:700px;
+}
+
+
+.hero p{
+margin-top:20px;
+font-size:20px;
+}
+
+
+section{
+padding:70px 8%;
+}
+
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+
+.card{
+background:white;
+box-shadow:0 5px 20px #ddd;
+}
+
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+
+.card h3{
+padding:20px;
+}
+
+
+.card p{
+padding:0 20px 25px;
+color:#666;
+}
+
+
+
+.about{
+text-align:center;
+font-size:20px;
+line-height:1.8;
+}
+
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+
+button{
+background:#111;
+color:white;
+padding:15px 30px;
+border:none;
+margin-top:30px;
+}
+
+</style>
+
 </head>
-<body class="font-sans text-gray-700 bg-gray-50">
 
-<!-- Top Bar -->
-<div class="bg-primary-dark text-white text-sm py-2 hidden md:block">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-        <div class="flex gap-6">
-            <span><i class="fa fa-envelope mr-2"></i>EstheerEagler@gmail.com</span>
-            <span><i class="fa fa-phone mr-2"></i>+86 183 6388 2260</span>
-        </div>
-        <div class="flex gap-4">
-            <span><i class="fa fa-clock mr-2"></i>Reply within 12 working hours</span>
-        </div>
-    </div>
+
+<body>
+
+
+<header>
+
+<div class="logo">
+IVAN MILLER
 </div>
 
-<!-- Header / Navigation -->
-<header class="bg-primary text-white sticky top-0 z-50 shadow-lg">
-    <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold tracking-tight">
-            <i class="fa fa-gem text-accent mr-2"></i>JEWELRY<span class="text-accent">FACTORY</span>
-        </a>
-        <div class="flex items-center gap-4">
-            <!-- Language Switcher -->
-            <select id="langSwitch" class="bg-primary-light border border-white/30 rounded px-3 py-1.5 text-white text-sm cursor-pointer focus:outline-none focus:border-accent">
-                <option value="en" selected>English</option>
-                <option value="es">Español</option>
-                <option value="ar">العربية</option>
-            </select>
-            <!-- Mobile Menu Button -->
-            <button id="menuBtn" class="md:hidden text-2xl focus:outline-none" aria-label="Toggle menu">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
-        <!-- Desktop Navigation -->
-        <nav id="mainNav" class="hidden w-full md:flex md:w-auto mt-4 md:mt-0">
-            <ul class="flex flex-col md:flex-row gap-6 md:gap-8 text-base font-medium">
-                <li><a href="index.html" class="nav-link text-accent">Home</a></li>
-                <li><a href="products.html" class="nav-link hover:text-accent transition">Products</a></li>
-                <li><a href="about.html" class="nav-link hover:text-accent transition">About Us</a></li>
-                <li><a href="contact.html" class="nav-link hover:text-accent transition">Contact</a></li>
-                <li><a href="admin.html" class="nav-link hover:text-accent transition text-xs opacity-70">Admin</a></li>
-                <li><a href="#quoteForm" class="bg-accent hover:bg-accent-dark px-5 py-2 rounded transition font-semibold">Get Quote</a></li>
-            </ul>
-        </nav>
-    </div>
+
+<nav>
+<a href=" ">Home</a >
+<a href="#">Fashion</a >
+<a href="#">Collections</a >
+<a href="#">Contact</a >
+</nav>
+
+
 </header>
 
-<!-- Hero Carousel -->
-<section class="relative h-[70vh] min-h-[480px] max-h-[700px] overflow-hidden bg-slate-800">
-    <!-- Slide 1 -->
-    <div class="carousel-slide active h-full">
-        <div class="h-full bg-cover bg-center relative" style="background-image:url('https://picsum.photos/id/152/1920/900')">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
-            <div class="relative h-full flex items-center">
-                <div class="container mx-auto px-6 text-white">
-                    <div class="max-w-2xl">
-                        <span class="inline-block bg-accent text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">OEM & ODM Custom Jewelry</span>
-                        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-4">Your Reliable Jewelry Wholesale & Custom Partner</h1>
-                        <p class="text-lg md:text-xl mb-8 opacity-90">Premium fashion jewelry, silver jewelry, zircon jewelry manufacturing for Europe, Middle East & global markets.</p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="#quoteForm" class="bg-accent hover:bg-accent-dark px-8 py-3.5 rounded font-semibold text-lg transition shadow-lg">Get A Free Quote</a>
-                            <a href="products.html" class="bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 px-8 py-3.5 rounded font-semibold text-lg transition">View Products</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Slide 2 -->
-    <div class="carousel-slide h-full">
-        <div class="h-full bg-cover bg-center relative" style="background-image:url('https://picsum.photos/id/24/1920/900')">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
-            <div class="relative h-full flex items-center">
-                <div class="container mx-auto px-6 text-white">
-                    <div class="max-w-2xl">
-                        <span class="inline-block bg-accent text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">Middle East Luxury Jewelry</span>
-                        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-4">Exquisite Jewelry Crafted for Global Elegance</h1>
-                        <p class="text-lg md:text-xl mb-8 opacity-90">From minimalist European styles to luxurious Middle East designs — we craft jewelry that captivates.</p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="#quoteForm" class="bg-accent hover:bg-accent-dark px-8 py-3.5 rounded font-semibold text-lg transition shadow-lg">Request A Quote</a>
-                            <a href="about.html" class="bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 px-8 py-3.5 rounded font-semibold text-lg transition">About Our Factory</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Slide 3 -->
-    <div class="carousel-slide h-full">
-        <div class="h-full bg-cover bg-center relative" style="background-image:url('https://picsum.photos/id/106/1920/900')">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
-            <div class="relative h-full flex items-center">
-                <div class="container mx-auto px-6 text-white">
-                    <div class="max-w-2xl">
-                        <span class="inline-block bg-accent text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">Fast Sample & Bulk Production</span>
-                        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-4">From Design to Delivery, We Create Your Jewelry</h1>
-                        <p class="text-lg md:text-xl mb-8 opacity-90">Send us your designs or references. Our team delivers custom jewelry with fast sampling and reliable bulk production.</p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="#quoteForm" class="bg-accent hover:bg-accent-dark px-8 py-3.5 rounded font-semibold text-lg transition shadow-lg">Start Your Project</a>
-                            <a href="contact.html" class="bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 px-8 py-3.5 rounded font-semibold text-lg transition">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Carousel Controls -->
-    <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur hover:bg-white/40 text-white rounded-full w-12 h-12 flex items-center justify-center transition z-10" onclick="prevSlide()" aria-label="Previous slide">
-        <i class="fa fa-chevron-left text-lg"></i>
-    </button>
-    <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur hover:bg-white/40 text-white rounded-full w-12 h-12 flex items-center justify-center transition z-10" onclick="nextSlide()" aria-label="Next slide">
-        <i class="fa fa-chevron-right text-lg"></i>
-    </button>
-    <!-- Dots -->
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-        <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" onclick="goToSlide(0)" aria-label="Slide 1"></button>
-        <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" onclick="goToSlide(1)" aria-label="Slide 2"></button>
-        <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" onclick="goToSlide(2)" aria-label="Slide 3"></button>
-    </div>
-</section>
 
-<!-- Trust Bar -->
-<section class="bg-white border-b py-6">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-                <div class="text-3xl font-bold text-primary">12+</div>
-                <div class="text-sm text-gray-500 mt-1">Years Experience</div>
-            </div>
-            <div>
-                <div class="text-3xl font-bold text-primary">800+</div>
-                <div class="text-sm text-gray-500 mt-1">Global Clients</div>
-            </div>
-            <div>
-                <div class="text-3xl font-bold text-primary">5000+</div>
-                <div class="text-sm text-gray-500 mt-1">New Styles / Year</div>
-            </div>
-            <div>
-                <div class="text-3xl font-bold text-primary">12h</div>
-                <div class="text-sm text-gray-500 mt-1">Quick Response</div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Three Core Advantages -->
-<section class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-14">
-            <span class="text-accent font-semibold text-sm uppercase tracking-wider">Why Work With Us</span>
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] text-primary font-bold mt-2">Our Core Advantages</h2>
-            <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded"></div>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="group p-8 bg-gray-50 rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                <div class="w-16 h-16 bg-accent/10 group-hover:bg-accent/20 text-accent rounded-2xl flex items-center justify-center text-3xl mb-6 transition">
-                    <i class="fa fa-globe"></i>
-                </div>
-                <h3 class="font-bold text-xl mb-3">Rich Industry Experience</h3>
-                <p class="group-hover:text-white/80 transition">Over 12 years of cross-border jewelry export experience, deeply rooted in European and Middle Eastern markets. We understand local fashion trends, quality standards, and aesthetic preferences.</p>
-            </div>
-            <div class="group p-8 bg-gray-50 rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                <div class="w-16 h-16 bg-accent/10 group-hover:bg-accent/20 text-accent rounded-2xl flex items-center justify-center text-3xl mb-6 transition">
-                    <i class="fa fa-certificate"></i>
-                </div>
-                <h3 class="font-bold text-xl mb-3">Authoritative Certifications</h3>
-                <p class="group-hover:text-white/80 transition">Jewelry export quality inspection certification, eco-friendly material certification, and international jewelry safety compliance. Fully compliant for global export to Europe and Middle East.</p>
-            </div>
-            <div class="group p-8 bg-gray-50 rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                <div class="w-16 h-16 bg-accent/10 group-hover:bg-accent/20 text-accent rounded-2xl flex items-center justify-center text-3xl mb-6 transition">
-                    <i class="fa fa-pen-ruler"></i>
-                </div>
-                <h3 class="font-bold text-xl mb-3">Custom OEM & ODM Service</h3>
-                <p class="group-hover:text-white/80 transition">Full OEM/ODM customization: style design, engraving, material selection, and custom packaging. We support private label and brand customization to meet your brand identity needs.</p>
-            </div>
-        </div>
-    </div>
-</section>
+<div class="hero">
 
-<!-- Product Categories -->
-<section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-14">
-            <span class="text-accent font-semibold text-sm uppercase tracking-wider">Our Collections</span>
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] text-primary font-bold mt-2">Product Categories</h2>
-            <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Explore our wide range of fashion jewelry categories for wholesale and custom order</p>
-            <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded"></div>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="products.html" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="relative overflow-hidden h-52">
-                    <img src="https://picsum.photos/id/152/500/400" alt="Necklaces & Pendants" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-                </div>
-                <div class="p-5">
-                    <h4 class="font-bold text-lg text-primary group-hover:text-accent transition">Necklaces & Pendants</h4>
-                    <p class="text-sm text-gray-500 mt-1">Chains, pendants, chokers, layered necklaces</p>
-                    <span class="inline-flex items-center text-accent text-sm font-semibold mt-3">View Products <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i></span>
-                </div>
-            </a>
-            <a href="products.html" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="relative overflow-hidden h-52">
-                    <img src="https://picsum.photos/id/145/500/400" alt="Bracelets & Bangles" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-                </div>
-                <div class="p-5">
-                    <h4 class="font-bold text-lg text-primary group-hover:text-accent transition">Bracelets & Bangles</h4>
-                    <p class="text-sm text-gray-500 mt-1">Cuff bracelets, charm bracelets, bangles</p>
-                    <span class="inline-flex items-center text-accent text-sm font-semibold mt-3">View Products <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i></span>
-                </div>
-            </a>
-            <a href="products.html" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="relative overflow-hidden h-52">
-                    <img src="https://picsum.photos/id/106/500/400" alt="Rings" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-                </div>
-                <div class="p-5">
-                    <h4 class="font-bold text-lg text-primary group-hover:text-accent transition">Rings</h4>
-                    <p class="text-sm text-gray-500 mt-1">Statement rings, wedding bands, fashion rings</p>
-                    <span class="inline-flex items-center text-accent text-sm font-semibold mt-3">View Products <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i></span>
-                </div>
-            </a>
-            <a href="products.html" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="relative overflow-hidden h-52">
-                    <img src="https://picsum.photos/id/1005/500/400" alt="Earrings" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-                </div>
-                <div class="p-5">
-                    <h4 class="font-bold text-lg text-primary group-hover:text-accent transition">Earrings</h4>
-                    <p class="text-sm text-gray-500 mt-1">Studs, hoops, drop earrings, ear cuffs</p>
-                    <span class="inline-flex items-center text-accent text-sm font-semibold mt-3">View Products <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i></span>
-                </div>
-            </a>
-            <a href="products.html" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="relative overflow-hidden h-52">
-                    <img src="https://picsum.photos/id/21/500/400" alt="Jewelry Sets" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-                </div>
-                <div class="p-5">
-                    <h4 class="font-bold text-lg text-primary group-hover:text-accent transition">Jewelry Sets</h4>
-                    <p class="text-sm text-gray-500 mt-1">Matching necklace & earring sets, bridal sets</p>
-                    <span class="inline-flex items-center text-accent text-sm font-semibold mt-3">View Products <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i></span>
-                </div>
-            </a>
-            <a href="products.html" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="relative overflow-hidden h-52">
-                    <img src="https://picsum.photos/id/1062/500/400" alt="Minimalist Luxury" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-                </div>
-                <div class="p-5">
-                    <h4 class="font-bold text-lg text-primary group-hover:text-accent transition">Minimalist Luxury</h4>
-                    <p class="text-sm text-gray-500 mt-1">Niche designer, lightweight everyday jewelry</p>
-                    <span class="inline-flex items-center text-accent text-sm font-semibold mt-3">View Products <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i></span>
-                </div>
-            </a>
-            <a href="products.html" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="relative overflow-hidden h-52">
-                    <img src="https://picsum.photos/id/1080/500/400" alt="Middle East Religious Jewelry" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-                </div>
-                <div class="p-5">
-                    <h4 class="font-bold text-lg text-primary group-hover:text-accent transition">Middle East Religious</h4>
-                    <p class="text-sm text-gray-500 mt-1">Islamic jewelry, Allah pendants, traditional designs</p>
-                    <span class="inline-flex items-center text-accent text-sm font-semibold mt-3">View Products <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i></span>
-                </div>
-            </a>
-            <a href="products.html" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="relative overflow-hidden h-52">
-                    <img src="https://picsum.photos/id/1025/500/400" alt="Custom OEM Jewelry" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-                </div>
-                <div class="p-5">
-                    <h4 class="font-bold text-lg text-primary group-hover:text-accent transition">Custom OEM Pieces</h4>
-                    <p class="text-sm text-gray-500 mt-1">Made to your designs, brand logo engraving</p>
-                    <span class="inline-flex items-center text-accent text-sm font-semibold mt-3">View Products <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i></span>
-                </div>
-            </a>
-        </div>
-        <div class="text-center mt-12">
-            <a href="products.html" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition">View All Products</a>
-        </div>
-    </div>
-</section>
+<div>
 
-<!-- Why Choose Us -->
-<section class="py-20 bg-primary text-white relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-    <div class="absolute bottom-0 left-0 w-72 h-72 bg-accent/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-    <div class="container mx-auto px-4 relative">
-        <div class="text-center mb-14">
-            <span class="text-accent font-semibold text-sm uppercase tracking-wider">Our Strength</span>
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mt-2">Why Choose Us</h2>
-            <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded"></div>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="text-center p-6 bg-white/5 backdrop-blur rounded-2xl hover:bg-white/10 transition">
-                <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
-                    <i class="fa fa-tags"></i>
-                </div>
-                <h4 class="font-semibold text-lg mb-2">High Cost Performance</h4>
-                <p class="text-white/70 text-sm">Factory direct pricing with premium quality, maximizing your profit margin for wholesale.</p>
-            </div>
-            <div class="text-center p-6 bg-white/5 backdrop-blur rounded-2xl hover:bg-white/10 transition">
-                <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
-                    <i class="fa fa-bolt"></i>
-                </div>
-                <h4 class="font-semibold text-lg mb-2">Fast Sampling</h4>
-                <p class="text-white/70 text-sm">Rapid prototype development — custom samples ready in 5-7 days, bulk production on schedule.</p>
-            </div>
-            <div class="text-center p-6 bg-white/5 backdrop-blur rounded-2xl hover:bg-white/10 transition">
-                <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
-                    <i class="fa fa-headset"></i>
-                </div>
-                <h4 class="font-semibold text-lg mb-2">12-Hour Reply</h4>
-                <p class="text-white/70 text-sm">Our foreign trade team guarantees a response within 12 working hours. WhatsApp available 24/7.</p>
-            </div>
-            <div class="text-center p-6 bg-white/5 backdrop-blur rounded-2xl hover:bg-white/10 transition">
-                <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
-                    <i class="fa fa-gem"></i>
-                </div>
-                <h4 class="font-semibold text-lg mb-2">Massive New Styles</h4>
-                <p class="text-white/70 text-sm">5000+ new designs launched every year, keeping your inventory ahead of fashion trends.</p>
-            </div>
-            <div class="text-center p-6 bg-white/5 backdrop-blur rounded-2xl hover:bg-white/10 transition">
-                <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
-                    <i class="fa fa-box-open"></i>
-                </div>
-                <h4 class="font-semibold text-lg mb-2">Flexible MOQ</h4>
-                <p class="text-white/70 text-sm">No minimum order quantity for stock items. Low MOQ for custom orders — perfect for small and bulk buyers.</p>
-            </div>
-            <div class="text-center p-6 bg-white/5 backdrop-blur rounded-2xl hover:bg-white/10 transition">
-                <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
-                    <i class="fa fa-handshake-angle"></i>
-                </div>
-                <h4 class="font-semibold text-lg mb-2">Dedicated After-sales</h4>
-                <p class="text-white/70 text-sm">Personal account manager, quality issue replacement guarantee, and long-term partnership support.</p>
-            </div>
-        </div>
-    </div>
-</section>
+<h1>
+Modern Fashion.
+Future Style.
+</h1>
 
-<!-- Client Testimonials -->
-<section class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-14">
-            <span class="text-accent font-semibold text-sm uppercase tracking-wider">Testimonials</span>
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] text-primary font-bold mt-2">What Our Clients Say</h2>
-            <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded"></div>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-gray-50 p-8 rounded-2xl relative hover:shadow-lg transition">
-                <div class="text-accent text-5xl absolute top-4 left-6 opacity-20"><i class="fa fa-quote-left"></i></div>
-                <div class="text-accent mb-4 relative">
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                </div>
-                <p class="italic mb-6 text-gray-600 relative">"Beautiful jewelry quality and very reliable supplier. We have been sourcing fashion jewelry from them for our European boutique for 4 years."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">S</div>
-                    <div>
-                        <p class="font-semibold text-primary">Sophie Laurent</p>
-                        <p class="text-sm text-gray-500">Boutique Owner, France</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-gray-50 p-8 rounded-2xl relative hover:shadow-lg transition">
-                <div class="text-accent text-5xl absolute top-4 left-6 opacity-20"><i class="fa fa-quote-left"></i></div>
-                <div class="text-accent mb-4 relative">
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                </div>
-                <p class="italic mb-6 text-gray-600 relative">"Excellent OEM service for our Middle East jewelry brand. They understand our market preferences perfectly and the custom designs are stunning."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">F</div>
-                    <div>
-                        <p class="font-semibold text-primary">Fatima Al-Rashid</p>
-                        <p class="text-sm text-gray-500">Brand Director, UAE</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-gray-50 p-8 rounded-2xl relative hover:shadow-lg transition">
-                <div class="text-accent text-5xl absolute top-4 left-6 opacity-20"><i class="fa fa-quote-left"></i></div>
-                <div class="text-accent mb-4 relative">
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-stroke"></i>
-                </div>
-                <p class="italic mb-6 text-gray-600 relative">"Fast sampling, competitive wholesale prices, and consistent quality. Our go-to jewelry supplier for cross-border e-commerce in Spain."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">M</div>
-                    <div>
-                        <p class="font-semibold text-primary">Miguel Torres</p>
-                        <p class="text-sm text-gray-500">E-commerce Seller, Spain</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<p>
+A digital fashion magazine exploring luxury,
+design and global trends.
+</p >
 
-<!-- Get Quote Form -->
-<section id="quoteForm" class="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
-    <div class="container mx-auto px-4">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-10">
-                <span class="text-accent font-semibold text-sm uppercase tracking-wider">Get Started</span>
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] text-primary font-bold mt-2">Get Your Free Quote</h2>
-                <p class="text-gray-600 mt-3">Tell us your jewelry requirements and our team will contact you within 12 working hours.</p>
-                <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded"></div>
-            </div>
-            <div class="bg-white shadow-2xl rounded-2xl overflow-hidden">
-                <div class="grid md:grid-cols-5">
-                    <!-- Form Side -->
-                    <div class="md:col-span-3 p-8 md:p-10">
-                        <form id="homeQuoteForm" class="space-y-5">
-                            <div class="grid md:grid-cols-2 gap-5">
-                                <div>
-                                    <label class="block mb-1.5 text-sm font-medium text-gray-700">Your Name <span class="text-accent">*</span></label>
-                                    <input type="text" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
-                                </div>
-                                <div>
-                                    <label class="block mb-1.5 text-sm font-medium text-gray-700">Company Name</label>
-                                    <input type="text" name="company" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
-                                </div>
-                            </div>
-                            <div class="grid md:grid-cols-2 gap-5">
-                                <div>
-                                    <label class="block mb-1.5 text-sm font-medium text-gray-700">Email <span class="text-accent">*</span></label>
-                                    <input type="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
-                                </div>
-                                <div>
-                                    <label class="block mb-1.5 text-sm font-medium text-gray-700">WhatsApp / Phone</label>
-                                    <input type="text" name="phone" placeholder="+XX XXXXXXXX" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
-                                </div>
-                            </div>
-                            <div class="grid md:grid-cols-2 gap-5">
-                                <div>
-                                    <label class="block mb-1.5 text-sm font-medium text-gray-700">Country / Target Market</label>
-                                    <input type="text" name="country" placeholder="e.g. France, Saudi Arabia" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
-                                </div>
-                                <div>
-                                    <label class="block mb-1.5 text-sm font-medium text-gray-700">Estimated Quantity</label>
-                                    <input type="text" name="quantity" placeholder="e.g. 500 pcs / 1000 pcs" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block mb-1.5 text-sm font-medium text-gray-700">Jewelry Requirement <span class="text-accent">*</span></label>
-                                <textarea name="message" rows="4" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition" placeholder="Tell us the jewelry type, material, style preference, custom design needs, packaging requirements..."></textarea>
-                            </div>
-                            <div class="flex flex-wrap gap-4 items-center pt-2">
-                                <button type="submit" class="bg-accent hover:bg-accent-dark text-white px-8 py-3 rounded-lg font-semibold transition shadow-lg">
-                                    <i class="fa fa-paper-plane mr-2"></i>Submit Inquiry
-                                </button>
-                                <a target="_blank" href="https://wa.me/8618363882260" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition shadow-lg">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i>Chat via WhatsApp
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Info Side -->
-                    <div class="md:col-span-2 bg-primary text-white p-8 md:p-10 flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold mb-6">Contact Us Directly</h3>
-                        <div class="space-y-5">
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa fa-envelope text-accent"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-white/60">Email</p>
-                                    <p class="font-medium">EstheerEagler@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-brands fa-whatsapp text-accent"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-white/60">WhatsApp</p>
-                                    <p class="font-medium">+86 183 6388 2260</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa fa-location-dot text-accent"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-white/60">Factory</p>
-                                    <p class="font-medium">Your City, China</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-8 p-4 bg-accent/20 rounded-xl border-l-4 border-accent">
-                            <p class="font-semibold"><i class="fa fa-clock mr-2"></i>12-Hour Response Promise</p>
-                            <p class="text-sm text-white/70 mt-1">We guarantee to reply to your inquiry within 12 working hours.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<button>
+Explore
+</button>
 
-<!-- Footer -->
-<footer class="bg-primary-dark text-white pt-16 pb-6">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-10 mb-12">
-            <div class="md:col-span-2">
-                <h3 class="text-2xl font-bold mb-4"><i class="fa fa-gem text-accent mr-2"></i>JEWELRY<span class="text-accent">FACTORY</span></h3>
-                <p class="text-white/70 mb-6 max-w-md">Professional China jewelry manufacturer specializing in OEM/ODM custom jewelry wholesale for Europe, Middle East and global markets. Your reliable jewelry wholesale & custom partner.</p>
-                <div class="flex gap-3">
-                    <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://wa.me/8618363882260" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div>
-                <h4 class="text-lg font-semibold mb-5">Quick Links</h4>
-                <ul class="space-y-3 text-white/70">
-                    <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
-                    <li><a href="products.html" class="hover:text-accent transition">Products</a></li>
-                    <li><a href="about.html" class="hover:text-accent transition">About Us</a></li>
-                    <li><a href="contact.html" class="hover:text-accent transition">Contact Us</a></li>
-                    <li><a href="privacy.html" class="hover:text-accent transition">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-lg font-semibold mb-5">Contact Info</h4>
-                <ul class="space-y-3 text-white/70">
-                    <li><i class="fa fa-envelope mr-2 text-accent"></i>EstheerEagler@gmail.com</li>
-                    <li><i class="fa-brands fa-whatsapp mr-2 text-accent"></i>+86 183 6388 2260</li>
-                    <li><i class="fa fa-location-dot mr-2 text-accent"></i>Your City, China</li>
-                </ul>
-            </div>
-        </div>
-        <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-white/50 text-sm">© 2026 Jewelry Factory. All Rights Reserved.</p>
-            <div class="flex gap-6 text-sm text-white/50">
-                <a href="privacy.html" class="hover:text-accent transition">Privacy Policy</a>
-                <a href="#" class="hover:text-accent transition">Terms of Service</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/8618363882260" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<!-- Cookie Consent Banner -->
-<div id="cookieBanner" class="cookie-banner">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="flex items-start gap-3">
-            <i class="fa fa-cookie-bite text-accent text-2xl mt-1"></i>
-            <div>
-                <p class="font-semibold">Cookie Consent</p>
-                <p class="text-sm text-white/70">We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept", you consent to our use of cookies.</p>
-            </div>
-        </div>
-        <div class="flex gap-3 flex-shrink-0">
-            <a href="privacy.html" class="text-white/70 hover:text-white text-sm underline">Learn More</a>
-            <button onclick="acceptCookies()" class="bg-accent hover:bg-accent-dark px-5 py-2 rounded-lg text-sm font-semibold transition">Accept All</button>
-        </div>
-    </div>
 </div>
 
-<script>
-// Mobile Menu Toggle
-document.getElementById('menuBtn').addEventListener('click', function() {
-    const nav = document.getElementById('mainNav');
-    nav.classList.toggle('hidden');
-});
+</div>
 
-// Carousel
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const dots = document.querySelectorAll('.carousel-dot');
-const totalSlides = slides.length;
 
-function updateDots() {
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('bg-white', i === currentSlide);
-        dot.classList.toggle('bg-white/50', i !== currentSlide);
-    });
-}
 
-function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    currentSlide = (index + totalSlides) % totalSlides;
-    slides[currentSlide].classList.add('active');
-    updateDots();
-}
+<section>
 
-function nextSlide() { showSlide(currentSlide + 1); }
-function prevSlide() { showSlide(currentSlide - 1); }
-function goToSlide(index) { showSlide(index); }
+<h2 class="title">
+Latest Stories
+</h2>
 
-updateDots();
-setInterval(nextSlide, 6000);
 
-// Language Switcher
-document.getElementById('langSwitch').addEventListener('change', function(e) {
-    const lang = e.target.value;
-    document.documentElement.lang = lang;
-    if (lang === 'ar') {
-        document.body.classList.add('lang-ar');
-    } else {
-        document.body.classList.remove('lang-ar');
-    }
-    // In production: load corresponding language JSON and replace page text
-});
+<div class="cards">
 
-// Form Submission
-document.getElementById('homeQuoteForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    // In production: fetch('/api/inquiry', { method: 'POST', body: new FormData(this) })
-    alert('Thank you! Your jewelry inquiry has been submitted. We will contact you within 12 working hours.\n\n(Note: This is a static demo. Connect to a backend API to actually receive inquiries.)');
-    this.reset();
-});
 
-// Cookie Banner
-function acceptCookies() {
-    localStorage.setItem('hf_cookie_accepted', 'true');
-    document.getElementById('cookieBanner').classList.remove('show');
-}
-if (!localStorage.getItem('hf_cookie_accepted')) {
-    setTimeout(function() {
-        document.getElementById('cookieBanner').classList.add('show');
-    }, 1500);
-}
-</script>
+<div class="card">
+
+< img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+
+<h3>
+Paris Fashion Week
+</h3>
+
+<p>
+Discover the newest runway trends and designer stories.
+</p >
+
+</div>
+
+
+
+<div class="card">
+
+< img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e">
+
+<h3>
+Luxury Collection
+</h3>
+
+<p>
+A new vision of elegance and modern lifestyle.
+</p >
+
+</div>
+
+
+
+<div class="card">
+
+< img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b">
+
+<h3>
+Street Fashion
+</h3>
+
+<p>
+How urban culture changes global fashion.
+</p >
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h2 class="title">
+About Ivan Miller
+</h2>
+
+
+<div class="about">
+
+Ivan Miller Fashion Magazine is an independent digital
+platform focusing on fashion, creativity and innovation.
+
+We connect designers, brands and fashion lovers
+around the world.
+
+</div>
+
+
+</section>
+
+
+
+<footer>
+
+© 2026 Ivan Miller Fashion Magazine
+
+</footer>
+
+
 </body>
 </html>
+s
