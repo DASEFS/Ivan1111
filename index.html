@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sean's STORE | Luxury Sustainable Fashion & Lifestyle</title>
-    <meta name="description" content="Sean's STORE — Curated luxury fashion, sustainable style and editorial aesthetics. Discover tasteful outfits and timeless design for the modern connoisseur.">
-    <meta name="keywords" content="sustainable fashion magazine, luxury fashion, Sean's STORE, curated style, minimalist outfits, sustainable lifestyle, editorial fashion, taste aesthetics">
+    <title>Sean's STORE | Sustainable Luxury Fashion Magazine</title>
+    <meta name="description" content="Sean's STORE — Curated luxury fashion, sustainable style and editorial aesthetics. A sustainable fashion magazine for the modern connoisseur.">
+    <meta name="keywords" content="sustainable fashion magazine, luxury fashion, curated style, minimalist outfits, sustainable lifestyle, editorial fashion, taste aesthetics, Sean's STORE">
     <meta name="author" content="Sean's STORE">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="./">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Sean's STORE | Luxury Sustainable Fashion">
+    <meta property="og:title" content="Sean's STORE | Sustainable Luxury Fashion Magazine">
     <meta property="og:description" content="Curated luxury fashion, sustainable style and editorial aesthetics.">
-    <meta property="og:image" content="assets/logo.jpg">
+    <meta property="og:image" content="logo.jpg">
     <meta property="og:site_name" content="Sean's STORE">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sean's STORE | Luxury Sustainable Fashion">
+    <meta name="twitter:title" content="Sean's STORE | Sustainable Luxury Fashion">
     <meta name="twitter:description" content="Curated luxury fashion and editorial aesthetics.">
-    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Store",
         "name": "Sean's STORE",
-        "description": "Curated luxury fashion, sustainable style and editorial aesthetics.",
+        "description": "Curated luxury fashion, sustainable style and editorial aesthetics. A sustainable fashion magazine.",
         "url": "./",
-        "logo": "assets/logo.jpg",
-        "image": "assets/logo.jpg",
+        "logo": "logo.jpg",
+        "image": "logo.jpg",
         "inLanguage": ["en", "zh-CN"],
         "address": { "@type": "PostalAddress", "addressCountry": "CN" },
         "contactPoint": {
@@ -42,133 +42,727 @@
     }
     </script>
 
+    <!-- Mark JS available early for reveal animations -->
+    <script>document.documentElement.classList.add('js');</script>
+
     <!-- ANALYTICS_CODE_PLACEHOLDER -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/* ============================================
+   Sean's STORE — Luxury Fashion Editorial
+   Palette: Deep Navy + Champagne Gold + Ivory
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+:root {
+  --navy: #0d1b2a;
+  --navy-light: #1b263b;
+  --navy-mid: #243447;
+  --gold: #c9a961;
+  --gold-light: #e0c98f;
+  --gold-dark: #a8893f;
+  --ivory: #faf8f3;
+  --ivory-dark: #f0ebe0;
+  --cream: #f5f0e8;
+  --text: #1a1a2e;
+  --text-light: #6b7280;
+  --text-muted: #9ca3af;
+  --white: #ffffff;
+  --border: rgba(201, 169, 97, 0.25);
+  --border-light: rgba(0, 0, 0, 0.08);
+  --shadow: 0 20px 60px rgba(13, 27, 42, 0.12);
+  --shadow-gold: 0 20px 60px rgba(201, 169, 97, 0.2);
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  background: var(--ivory);
+  color: var(--text);
+  line-height: 1.8;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--gold); color: var(--navy); }
+
+h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.01em; line-height: 1.15; }
+h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); }
+h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+p { font-size: 0.95rem; color: var(--text-light); }
+a { color: inherit; text-decoration: none; transition: color 0.3s var(--ease); }
+img { max-width: 100%; display: block; }
+
+.container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+.container-narrow { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+
+/* ===== Scroll Reveal ===== */
+.reveal, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+html.js .reveal { opacity: 0; transform: translateY(40px); }
+html.js .reveal.visible { opacity: 1; transform: translateY(0); }
+html.js .reveal-left { opacity: 0; transform: translateX(-50px); }
+html.js .reveal-left.visible { opacity: 1; transform: translateX(0); }
+html.js .reveal-right { opacity: 0; transform: translateX(50px); }
+html.js .reveal-right.visible { opacity: 1; transform: translateX(0); }
+html.js .reveal-scale { opacity: 0; transform: scale(0.92); }
+html.js .reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+/* ===== Navigation ===== */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 24px 0; transition: all 0.5s var(--ease);
+  background: transparent;
+}
+.navbar.scrolled {
+  background: rgba(13, 27, 42, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 16px 0;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 12px; }
+.nav-logo img { height: 42px; width: 42px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--gold); }
+.nav-logo-text { font-family: var(--font-display); font-size: 1.3rem; color: var(--white); letter-spacing: 0.04em; }
+.nav-logo-text span { color: var(--gold); }
+
+.nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.8); position: relative; padding: 4px 0;
+  font-weight: 400;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px;
+  background: var(--gold); transition: width 0.4s var(--ease);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+.nav-actions { display: flex; align-items: center; gap: 16px; }
+.lang-btn {
+  background: transparent; border: 1px solid rgba(201,169,97,0.4);
+  padding: 8px 20px; border-radius: 100px; font-size: 0.72rem;
+  letter-spacing: 0.1em; cursor: pointer; color: var(--gold);
+  transition: all 0.3s var(--ease); font-family: var(--font-sans);
+}
+.lang-btn:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+.hamburger { display: none; background: none; border: none; font-size: 1.3rem; cursor: pointer; color: var(--white); }
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--navy); z-index: 999;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 32px; opacity: 0; pointer-events: none; transition: opacity 0.5s var(--ease);
+}
+.mobile-menu.open { opacity: 1; pointer-events: all; }
+.mobile-menu a {
+  font-family: var(--font-display); font-size: 1.8rem; color: var(--white);
+  letter-spacing: 0.05em; transition: color 0.3s;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-close {
+  position: absolute; top: 28px; right: 40px; background: none; border: none;
+  color: var(--white); font-size: 1.5rem; cursor: pointer;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh; position: relative; display: flex; align-items: center;
+  background: var(--navy); overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(201,169,97,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(27,38,59,0.8) 0%, transparent 60%),
+    linear-gradient(135deg, #0d1b2a 0%, #1b263b 50%, #0d1b2a 100%);
+}
+.hero-pattern {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+  background-size: 40px 40px;
+}
+.hero-content {
+  position: relative; z-index: 2; text-align: center; width: 100%;
+  padding: 120px 40px 80px;
+}
+.hero-logo-wrap {
+  width: 140px; height: 140px; margin: 0 auto 40px;
+  border-radius: 50%; overflow: hidden;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 60px rgba(201,169,97,0.3);
+  animation: logoFloat 4s ease-in-out infinite;
+}
+.hero-logo-wrap img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes logoFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+
+.hero-eyebrow {
+  font-size: 0.75rem; letter-spacing: 0.5em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 24px; font-weight: 400;
+}
+.hero-title {
+  color: var(--white); margin-bottom: 24px;
+  font-family: var(--font-display);
+}
+.hero-title em {
+  font-style: italic; color: var(--gold);
+  font-family: var(--font-serif);
+}
+.hero-subtitle {
+  font-family: var(--font-serif); font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: rgba(255,255,255,0.6); font-weight: 300; font-style: italic;
+  max-width: 600px; margin: 0 auto 50px; line-height: 1.6;
+}
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 16px 40px; background: transparent;
+  border: 1px solid var(--gold); color: var(--gold);
+  font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.4s var(--ease); font-family: var(--font-sans);
+  position: relative; overflow: hidden;
+}
+.hero-cta::before {
+  content: ''; position: absolute; inset: 0; background: var(--gold);
+  transform: translateX(-101%); transition: transform 0.4s var(--ease); z-index: -1;
+}
+.hero-cta:hover { color: var(--navy); }
+.hero-cta:hover::before { transform: translateX(0); }
+.hero-cta i { transition: transform 0.3s; }
+.hero-cta:hover i { transform: translateX(4px); }
+
+.hero-scroll-indicator {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  color: rgba(255,255,255,0.4); font-size: 0.65rem; letter-spacing: 0.3em;
+  text-transform: uppercase; z-index: 2;
+}
+.hero-scroll-line {
+  width: 1px; height: 50px; background: linear-gradient(to bottom, var(--gold), transparent);
+  position: relative; overflow: hidden;
+}
+.hero-scroll-line::after {
+  content: ''; position: absolute; top: -50%; left: 0; width: 100%; height: 50%;
+  background: var(--gold); animation: scrollLine 2s infinite;
+}
+@keyframes scrollLine { 0%{top:-50%} 100%{top:100%} }
+
+/* ===== Marquee ===== */
+.marquee {
+  background: var(--navy); padding: 28px 0; overflow: hidden;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.marquee-track {
+  display: flex; gap: 60px; white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+.marquee-item {
+  font-family: var(--font-display); font-size: 1.1rem; color: rgba(255,255,255,0.3);
+  letter-spacing: 0.15em; text-transform: uppercase; display: flex; align-items: center; gap: 60px;
+}
+.marquee-item::after { content: '✦'; color: var(--gold); font-size: 0.7rem; }
+@keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ===== Editorial Grid ===== */
+.editorial-section { background: var(--ivory); }
+.editorial-grid {
+  display: grid; grid-template-columns: repeat(12, 1fr);
+  gap: 30px; margin-top: 60px;
+}
+.editorial-card {
+  position: relative; overflow: hidden; cursor: pointer;
+  background: var(--navy); border-radius: 4px;
+}
+.editorial-card.large { grid-column: span 7; aspect-ratio: 16/10; }
+.editorial-card.medium { grid-column: span 5; aspect-ratio: 4/3; }
+.editorial-card.small { grid-column: span 4; aspect-ratio: 1; }
+.editorial-card.wide { grid-column: span 8; aspect-ratio: 21/9; }
+
+.editorial-card-img {
+  position: absolute; inset: 0; transition: transform 0.8s var(--ease-out);
+  background: linear-gradient(135deg, var(--navy-light), var(--navy));
+}
+.editorial-card-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: opacity 0.5s; }
+.editorial-card:hover .editorial-card-img { transform: scale(1.05); }
+.editorial-card:hover .editorial-card-img img { opacity: 0.6; }
+
+.editorial-card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(13,27,42,0.9) 0%, rgba(13,27,42,0.2) 50%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 36px;
+}
+.editorial-card-cat {
+  font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 12px; font-weight: 500;
+}
+.editorial-card-title {
+  font-family: var(--font-display); font-size: 1.5rem; color: var(--white);
+  margin-bottom: 8px; line-height: 1.3;
+}
+.editorial-card.large .editorial-card-title { font-size: 2rem; }
+.editorial-card-excerpt {
+  font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.editorial-card-meta {
+  display: flex; gap: 16px; margin-top: 16px;
+  font-size: 0.72rem; color: rgba(255,255,255,0.4); letter-spacing: 0.1em;
+}
+.editorial-card-arrow {
+  position: absolute; top: 28px; right: 28px; width: 44px; height: 44px;
+  border-radius: 50%; border: 1px solid rgba(201,169,97,0.4);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); font-size: 0.8rem; transition: all 0.4s var(--ease);
+  background: rgba(13,27,42,0.5); backdrop-filter: blur(10px);
+}
+.editorial-card:hover .editorial-card-arrow {
+  background: var(--gold); color: var(--navy); border-color: var(--gold);
+  transform: rotate(-45deg);
+}
+
+/* ===== Section Common ===== */
+.section { padding: 140px 0; position: relative; }
+.section-label {
+  display: inline-flex; align-items: center; gap: 16px;
+  font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px; font-weight: 500;
+}
+.section-label::before {
+  content: ''; width: 40px; height: 1px; background: var(--gold);
+}
+.section-title { margin-bottom: 20px; }
+.section-title em { font-style: italic; color: var(--gold); font-family: var(--font-serif); }
+.section-desc {
+  font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-light);
+  max-width: 600px; line-height: 1.7; font-style: italic;
+}
+
+/* ===== Brand Story ===== */
+.story-section { background: var(--cream); overflow: hidden; }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.story-images { position: relative; }
+.story-img-main {
+  width: 80%; aspect-ratio: 3/4; border-radius: 4px; overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.story-img-main img { width: 100%; height: 100%; object-fit: cover; }
+.story-img-sub {
+  position: absolute; bottom: -40px; right: 0; width: 55%; aspect-ratio: 1;
+  border-radius: 4px; overflow: hidden; box-shadow: var(--shadow-gold);
+  border: 6px solid var(--ivory);
+}
+.story-img-sub img { width: 100%; height: 100%; object-fit: cover; }
+.story-badge {
+  position: absolute; top: 20px; left: -20px;
+  background: var(--gold); color: var(--navy);
+  padding: 16px 24px; border-radius: 4px;
+  font-family: var(--font-display); font-size: 1.1rem;
+  box-shadow: var(--shadow-gold);
+}
+.story-content { padding-left: 40px; }
+.story-content .section-title { margin-bottom: 28px; }
+.story-text { font-size: 1rem; line-height: 1.9; margin-bottom: 20px; color: var(--text-light); }
+.story-features { margin-top: 36px; display: flex; flex-direction: column; gap: 20px; }
+.story-feature { display: flex; gap: 16px; align-items: flex-start; }
+.story-feature-num {
+  font-family: var(--font-display); font-size: 1.5rem; color: var(--gold);
+  font-style: italic; min-width: 40px;
+}
+.story-feature-text h4 { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
+.story-feature-text p { font-size: 0.85rem; }
+
+/* ===== Collection ===== */
+.collection-section { background: var(--ivory); }
+.collection-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px; }
+.collection-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+.product-card {
+  background: var(--white); border-radius: 4px; overflow: hidden;
+  transition: all 0.5s var(--ease); cursor: pointer;
+  border: 1px solid var(--border-light);
+}
+.product-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.product-img {
+  aspect-ratio: 3/4; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--ivory-dark), var(--cream));
+}
+.product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.product-card:hover .product-img img { transform: scale(1.08); }
+.product-tag {
+  position: absolute; top: 16px; left: 16px;
+  background: var(--navy); color: var(--gold);
+  padding: 5px 14px; border-radius: 100px;
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+}
+.product-info { padding: 24px 20px; }
+.product-cat { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.product-name { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 6px; }
+.product-price { font-size: 0.95rem; color: var(--text); font-weight: 500; }
+.product-price span { color: var(--text-muted); text-decoration: line-through; font-size: 0.8rem; margin-right: 8px; }
+
+/* ===== Stats Band ===== */
+.stats-band {
+  background: var(--navy); padding: 80px 0;
+  position: relative; overflow: hidden;
+}
+.stats-band::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(201,169,97,0.08) 0%, transparent 70%);
+}
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; position: relative; z-index: 1; }
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: var(--font-display); font-size: 3.5rem; color: var(--gold);
+  line-height: 1; margin-bottom: 12px;
+}
+.stat-label {
+  font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ===== Testimonial ===== */
+.testimonial-section { background: var(--cream); }
+.testimonial-wrap { max-width: 800px; margin: 0 auto; text-align: center; }
+.testimonial-quote {
+  font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-style: italic; line-height: 1.6; color: var(--text);
+  margin-bottom: 36px; position: relative;
+}
+.testimonial-quote::before {
+  content: '"'; font-family: var(--font-display); font-size: 6rem;
+  color: var(--gold); opacity: 0.3; position: absolute; top: -40px; left: 50%;
+  transform: translateX(-50%);
+}
+.testimonial-author { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.testimonial-avatar {
+  width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
+  border: 2px solid var(--gold);
+}
+.testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testimonial-name { font-family: var(--font-display); font-size: 1.1rem; }
+.testimonial-role { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ===== Contact ===== */
+.contact-section { background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+.contact-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(201,169,97,0.08) 0%, transparent 60%);
+}
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; position: relative; z-index: 1; }
+.contact-section .section-label { color: var(--gold); }
+.contact-section .section-title { color: var(--white); }
+.contact-section .section-desc { color: rgba(255,255,255,0.5); }
+
+.contact-info { display: flex; flex-direction: column; gap: 28px; margin-top: 40px; }
+.contact-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 24px; background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,169,97,0.15); border-radius: 4px;
+  transition: all 0.4s var(--ease);
+}
+.contact-item:hover { background: rgba(201,169,97,0.05); border-color: rgba(201,169,97,0.3); transform: translateX(6px); }
+.contact-icon {
+  width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy); font-size: 1rem;
+}
+.contact-item h4 { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: var(--gold); margin-bottom: 4px; letter-spacing: 0.1em; text-transform: uppercase; }
+.contact-item a, .contact-item p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+.contact-item a:hover { color: var(--gold); }
+
+.response-promise {
+  margin-top: 32px; padding: 28px;
+  background: linear-gradient(135deg, rgba(201,169,97,0.15), rgba(201,169,97,0.05));
+  border: 1px solid rgba(201,169,97,0.3); border-radius: 4px;
+  display: flex; gap: 20px; align-items: center;
+}
+.response-promise .icon {
+  width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0;
+  background: var(--gold); display: flex; align-items: center; justify-content: center;
+  color: var(--navy); font-size: 1.3rem;
+}
+.response-promise h4 { color: var(--gold); font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 4px; }
+.response-promise p { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+
+.contact-map {
+  border-radius: 4px; overflow: hidden; min-height: 500px;
+  border: 1px solid rgba(201,169,97,0.2);
+  background: var(--navy-light);
+}
+.contact-map iframe { width: 100%; height: 100%; min-height: 500px; border: 0; }
+.map-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  height: 500px; color: rgba(255,255,255,0.3); text-align: center;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02) 10px, transparent 10px, transparent 20px);
+}
+.map-placeholder i { font-size: 2.5rem; color: var(--gold); opacity: 0.5; margin-bottom: 16px; display: block; }
+
+/* ===== Privacy ===== */
+.privacy-section { background: var(--ivory); }
+.privacy-content {
+  max-width: 800px; margin: 0 auto; background: var(--white);
+  padding: 60px; border-radius: 4px; box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold);
+}
+.privacy-content h2 { text-align: center; margin-bottom: 40px; }
+.privacy-content h3 {
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 600;
+  margin: 32px 0 12px; color: var(--navy);
+  padding-left: 16px; border-left: 3px solid var(--gold);
+}
+.privacy-content p { font-size: 0.9rem; margin-bottom: 12px; line-height: 1.8; }
+.privacy-content ul { padding-left: 24px; margin-bottom: 16px; }
+.privacy-content li { font-size: 0.88rem; color: var(--text-light); margin-bottom: 8px; }
+
+/* ===== Footer ===== */
+.footer { background: #081220; color: rgba(255,255,255,0.5); padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+.footer-brand-logo { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.footer-brand-logo img { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--gold); }
+.footer-brand-logo h3 { color: var(--white); font-size: 1.3rem; }
+.footer-brand-logo h3 span { color: var(--gold); }
+.footer-brand p { font-size: 0.85rem; line-height: 1.8; max-width: 320px; color: rgba(255,255,255,0.4); }
+.footer-social { display: flex; gap: 12px; margin-top: 24px; }
+.footer-social a {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid rgba(201,169,97,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); font-size: 0.85rem; transition: all 0.3s;
+}
+.footer-social a:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+.footer-col h4 {
+  color: var(--white); font-family: var(--font-sans); font-size: 0.8rem;
+  font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 12px; }
+.footer-col a { font-size: 0.85rem; color: rgba(255,255,255,0.4); transition: color 0.3s; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 30px; display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.78rem; color: rgba(255,255,255,0.3);
+}
+
+/* ===== Cookie Banner ===== */
+.cookie-banner {
+  position: fixed; bottom: 30px; left: 30px; right: 30px; max-width: 560px;
+  margin: 0 auto; background: var(--navy); border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3); padding: 28px 32px;
+  z-index: 2000; border: 1px solid var(--border);
+  transform: translateY(150%); transition: transform 0.6s var(--ease-out);
+}
+.cookie-banner.show { transform: translateY(0); }
+.cookie-banner h4 { color: var(--gold); font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; letter-spacing: 0.05em; }
+.cookie-banner p { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 20px; }
+.cookie-banner p a { color: var(--gold); text-decoration: underline; }
+.cookie-btns { display: flex; gap: 12px; }
+.cookie-btn {
+  padding: 10px 24px; border-radius: 4px; font-size: 0.78rem;
+  cursor: pointer; border: none; transition: all 0.3s; font-family: var(--font-sans);
+  letter-spacing: 0.08em;
+}
+.cookie-btn.accept { background: var(--gold); color: var(--navy); font-weight: 500; }
+.cookie-btn.accept:hover { background: var(--gold-light); }
+.cookie-btn.decline { background: transparent; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.15); }
+.cookie-btn.decline:hover { border-color: rgba(255,255,255,0.3); color: var(--white); }
+
+/* ===== Article Modal ===== */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(8,18,32,0.85); backdrop-filter: blur(8px);
+  z-index: 3000; display: none; align-items: center; justify-content: center; padding: 40px;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--ivory); border-radius: 4px; max-width: 760px; width: 100%;
+  max-height: 88vh; overflow-y: auto; position: relative;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+}
+.modal-close {
+  position: fixed; top: 30px; right: 30px; width: 48px; height: 48px;
+  border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer; font-size: 1rem; color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 3001; transition: all 0.3s; backdrop-filter: blur(10px);
+}
+.modal-close:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); transform: rotate(90deg); }
+.modal-cover { height: 320px; background: linear-gradient(135deg, var(--navy-light), var(--navy)); position: relative; }
+.modal-cover img { width: 100%; height: 100%; object-fit: cover; }
+.modal-cover::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, var(--ivory) 0%, transparent 40%);
+}
+.modal-body { padding: 0 50px 50px; margin-top: -60px; position: relative; z-index: 2; }
+.modal-cat {
+  display: inline-block; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); background: var(--white); padding: 6px 16px; border-radius: 100px;
+  margin-bottom: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.modal-body h2 { font-size: 2.2rem; margin-bottom: 16px; }
+.modal-meta { display: flex; gap: 20px; font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.08em; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border-light); }
+.modal-content { font-size: 1rem; line-height: 2; color: var(--text); }
+.modal-content p { margin-bottom: 20px; color: var(--text); font-size: 0.98rem; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .container { padding: 0 30px; }
+  .editorial-card.large { grid-column: span 12; }
+  .editorial-card.medium { grid-column: span 6; }
+  .editorial-card.small { grid-column: span 6; }
+  .editorial-card.wide { grid-column: span 12; }
+  .collection-grid { grid-template-columns: repeat(3, 1fr); }
+  .story-grid { gap: 50px; }
+}
+
+@media (max-width: 992px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .section { padding: 100px 0; }
+  .story-grid { grid-template-columns: 1fr; gap: 60px; }
+  .story-content { padding-left: 0; }
+  .story-img-sub { display: none; }
+  .story-img-main { width: 100%; }
+  .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+  .collection-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .editorial-card.medium, .editorial-card.small { grid-column: span 12; }
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 20px; }
+  .section { padding: 80px 0; }
+  .hero-content { padding: 100px 20px 60px; }
+  .hero-logo-wrap { width: 100px; height: 100px; }
+  .collection-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .stat-num { font-size: 2.5rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .cookie-banner { left: 16px; right: 16px; padding: 20px; bottom: 16px; }
+  .cookie-btns { flex-direction: column; }
+  .cookie-btn { width: 100%; }
+  .privacy-content { padding: 32px 24px; }
+  .modal-body { padding: 0 24px 40px; }
+  .modal-body h2 { font-size: 1.6rem; }
+  .modal-cover { height: 220px; }
+  .form-row { grid-template-columns: 1fr; }
+  .editorial-card-overlay { padding: 24px; }
+  .editorial-card.large .editorial-card-title { font-size: 1.4rem; }
+  .collection-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+    </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- ===== Navigation ===== -->
     <nav class="navbar" id="navbar">
         <div class="container nav-inner">
             <a href="#home" class="nav-logo">
-                <img src="assets/logo.jpg" alt="Sean's STORE">
+                <img src="logo.jpg" alt="Sean's STORE">
                 <span class="nav-logo-text">Sean's <span>STORE</span></span>
             </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
-                <li><a href="#editorial" data-i18n="nav_editorial">Editorial</a></li>
-                <li><a href="#story" data-i18n="nav_story">Story</a></li>
-                <li><a href="#collection" data-i18n="nav_collection">Collection</a></li>
-                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-            </ul>
+            <ul class="nav-links" id="navLinks"></ul>
             <div class="nav-actions">
-                <button class="lang-btn" id="langBtn" onclick="toggleLang()">中文 / EN</button>
+                <button class="lang-btn" onclick="toggleLanguage()">中文 / EN</button>
                 <button class="hamburger" onclick="openMobileMenu()"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
-        <a href="#home" onclick="closeMobileMenu()" data-i18n="nav_home">Home</a>
-        <a href="#editorial" onclick="closeMobileMenu()" data-i18n="nav_editorial">Editorial</a>
-        <a href="#story" onclick="closeMobileMenu()" data-i18n="nav_story">Story</a>
-        <a href="#collection" onclick="closeMobileMenu()" data-i18n="nav_collection">Collection</a>
-        <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav_contact">Contact</a>
-    </div>
+    <div class="mobile-menu" id="mobileMenu"></div>
 
-    <!-- Hero -->
+    <!-- ===== Hero ===== -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="hero-pattern"></div>
         <div class="hero-content">
             <div class="hero-logo-wrap reveal-scale">
-                <img src="assets/logo.jpg" alt="Sean's STORE Logo">
+                <img src="logo.jpg" alt="Sean's STORE Logo">
             </div>
-            <p class="hero-eyebrow reveal" data-i18n="hero_eyebrow">Curated Luxury · Sustainable Style</p>
+            <p class="hero-eyebrow reveal" id="heroEyebrow">Curated Luxury · Sustainable Style</p>
             <h1 class="hero-title reveal">
-                <span data-i18n="hero_title_line1">Where Taste Meets</span><br>
-                <em data-i18n="hero_title_line2">Timeless Elegance</em>
+                <span id="heroTitle1">Where Taste Meets</span><br>
+                <em id="heroTitle2">Timeless Elegance</em>
             </h1>
-            <p class="hero-subtitle reveal" data-i18n="hero_subtitle">A curated destination for the modern connoisseur — sustainable fashion, editorial aesthetics, and pieces that tell a story.</p>
-            <a href="#editorial" class="hero-cta reveal">
-                <span data-i18n="hero_cta">Explore the Collection</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
+            <p class="hero-subtitle reveal" id="heroSubtitle">A curated destination for the modern connoisseur.</p>
+            <a href="#collection" class="hero-cta reveal" id="heroCta">Explore the Collection <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="hero-scroll-indicator">
-            <span data-i18n="hero_scroll">Scroll</span>
+            <span>Scroll</span>
             <div class="hero-scroll-line"></div>
         </div>
     </section>
 
-    <!-- Marquee -->
+    <!-- ===== Marquee ===== -->
     <div class="marquee">
-        <div class="marquee-track">
-            <span class="marquee-item">Sustainable Fashion</span>
-            <span class="marquee-item">Editorial Curation</span>
-            <span class="marquee-item">Timeless Design</span>
-            <span class="marquee-item">Artistic Aesthetics</span>
-            <span class="marquee-item">Luxury Lifestyle</span>
-            <span class="marquee-item">Sustainable Fashion</span>
-            <span class="marquee-item">Editorial Curation</span>
-            <span class="marquee-item">Timeless Design</span>
-            <span class="marquee-item">Artistic Aesthetics</span>
-            <span class="marquee-item">Luxury Lifestyle</span>
-        </div>
+        <div class="marquee-track" id="marqueeTrack"></div>
     </div>
 
-    <!-- Editorial -->
+    <!-- ===== Editorial ===== -->
     <section class="section editorial-section" id="editorial">
         <div class="container">
             <div class="reveal">
-                <span class="section-label" data-i18n="editorial_label">Featured Editorial</span>
-                <h2 class="section-title">Stories That <em data-i18n="editorial_title_em">Inspire</em></h2>
-                <p class="section-desc" data-i18n="editorial_desc">Curated narratives at the intersection of fashion, art, and conscious living.</p>
+                <span class="section-label" id="editorialLabel">Featured Editorial</span>
+                <h2 class="section-title" id="editorialTitle">Stories That <em>Inspire</em></h2>
+                <p class="section-desc" id="editorialDesc">Thoughtful essays on style, culture, and the art of living well.</p>
             </div>
             <div class="editorial-grid" id="editorialGrid"></div>
         </div>
     </section>
 
-    <!-- Brand Story -->
+    <!-- ===== Brand Story ===== -->
     <section class="section story-section" id="story">
         <div class="container">
             <div class="story-grid">
                 <div class="story-images reveal-left">
                     <div class="story-img-main">
-                        <img src="assets/logo.jpg" alt="Sean's STORE Brand Story">
+                        <img src="logo.jpg" alt="Sean's STORE Brand Story">
                     </div>
                     <div class="story-img-sub">
-                        <img src="assets/logo.jpg" alt="Sean's STORE Detail">
+                        <img src="logo.jpg" alt="Sean's STORE Detail">
                     </div>
-                    <div class="story-badge">Est. 2026</div>
+                    <div class="story-badge" id="storyBadge">Est. 2024</div>
                 </div>
                 <div class="story-content reveal-right">
-                    <span class="section-label" data-i18n="story_label">Our Story</span>
-                    <h2 class="section-title">Born from a <em data-i18n="story_title_em">Passion</em> for Beauty</h2>
-                    <p class="story-text" data-i18n="story_p1">Sean's STORE was founded on a simple belief — that true luxury lies in intention. Every piece we curate is chosen for its craftsmanship, its story, and its respect for the planet.</p>
-                    <p class="story-text" data-i18n="story_p2">We bridge European editorial refinement with minimalist Asian aesthetics, creating a space where taste is not just seen, but felt.</p>
+                    <span class="section-label" id="storyLabel">Our Story</span>
+                    <h2 class="section-title" id="storyTitle">A Vision of <em>Intentional Luxury</em></h2>
+                    <p class="story-text" id="storyP1">Sean's STORE was born from a simple belief.</p>
+                    <p class="story-text" id="storyP2">Every item in our collection is chosen with intention.</p>
                     <div class="story-features">
                         <div class="story-feature">
                             <span class="story-feature-num">01</span>
                             <div class="story-feature-text">
-                                <h4 data-i18n="story_f1_title">Curated Taste</h4>
-                                <p data-i18n="story_f1_desc">Every item hand-selected by our editorial team for quality and character.</p>
+                                <h4 id="storyF1t">Curated Excellence</h4>
+                                <p id="storyF1d">Every piece hand-selected for quality and character.</p>
                             </div>
                         </div>
                         <div class="story-feature">
                             <span class="story-feature-num">02</span>
                             <div class="story-feature-text">
-                                <h4 data-i18n="story_f2_title">Sustainable Ethos</h4>
-                                <p data-i18n="story_f2_desc">Prioritizing eco-conscious brands and timeless design over fast fashion.</p>
+                                <h4 id="storyF2t">Sustainable First</h4>
+                                <p id="storyF2d">Ethical materials and responsible production always.</p>
                             </div>
                         </div>
                         <div class="story-feature">
                             <span class="story-feature-num">03</span>
                             <div class="story-feature-text">
-                                <h4 data-i18n="story_f3_title">Artistic Vision</h4>
-                                <p data-i18n="story_f3_desc">Infusing every collection with gallery-worthy aesthetics and cultural narrative.</p>
+                                <h4 id="storyF3t">Timeless Design</h4>
+                                <p id="storyF3d">Pieces that transcend seasons and trends.</p>
                             </div>
                         </div>
                     </div>
@@ -177,107 +771,107 @@
         </div>
     </section>
 
-    <!-- Collection / Products -->
+    <!-- ===== Collection ===== -->
     <section class="section collection-section" id="collection">
         <div class="container">
             <div class="collection-header">
                 <div class="reveal">
-                    <span class="section-label" data-i18n="collection_label">The Collection</span>
-                    <h2 class="section-title">Pieces Worth <em data-i18n="collection_title_em">Keeping</em></h2>
+                    <span class="section-label" id="collectionLabel">The Collection</span>
+                    <h2 class="section-title" id="collectionTitle">Pieces That <em>Define You</em></h2>
+                    <p class="section-desc" id="collectionDesc">A carefully edited selection of garments and accessories.</p>
                 </div>
-                <a href="#contact" class="hero-cta reveal" style="padding:12px 28px;font-size:0.72rem;">
-                    <span data-i18n="collection_cta">Inquire Now</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
             <div class="collection-grid" id="collectionGrid"></div>
         </div>
     </section>
 
-    <!-- Stats Band -->
+    <!-- ===== Stats Band ===== -->
     <div class="stats-band">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item reveal">
-                    <div class="stat-num" id="statProducts">0</div>
-                    <div class="stat-label" data-i18n="stat_products">Curated Pieces</div>
+                    <div class="stat-num" id="stat1n">500+</div>
+                    <div class="stat-label" id="stat1l">Curated Pieces</div>
                 </div>
                 <div class="stat-item reveal">
-                    <div class="stat-num">2</div>
-                    <div class="stat-label" data-i18n="stat_lang">Languages</div>
+                    <div class="stat-num" id="stat2n">50+</div>
+                    <div class="stat-label" id="stat2l">Artisan Partners</div>
                 </div>
                 <div class="stat-item reveal">
-                    <div class="stat-num">12h</div>
-                    <div class="stat-label" data-i18n="stat_reply">Reply Time</div>
+                    <div class="stat-num" id="stat3n">100%</div>
+                    <div class="stat-label" id="stat3l">Sustainable</div>
                 </div>
                 <div class="stat-item reveal">
-                    <div class="stat-num">100%</div>
-                    <div class="stat-label" data-i18n="stat_sustainable">Sustainable Focus</div>
+                    <div class="stat-num" id="stat4n">12h</div>
+                    <div class="stat-label" id="stat4l">Response Time</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Testimonial -->
+    <!-- ===== Testimonial ===== -->
     <section class="section testimonial-section">
         <div class="container">
             <div class="testimonial-wrap reveal">
-                <p class="testimonial-quote" data-i18n="testimonial_text">Sean's STORE has completely redefined how I approach my wardrobe. Every piece feels intentional, every story feels personal. This is not just shopping — it's curating a life of beauty.</p>
+                <p class="testimonial-quote" id="testimonialQuote">Sean's STORE has redefined what sustainable luxury means to me.</p>
                 <div class="testimonial-author">
-                    <div class="testimonial-avatar"><img src="assets/logo.jpg" alt="Customer"></div>
+                    <div class="testimonial-avatar"><img src="logo.jpg" alt="Customer"></div>
                     <div>
-                        <div class="testimonial-name" data-i18n="testimonial_name">Elena Marchetti</div>
-                        <div class="testimonial-role" data-i18n="testimonial_role">Fashion Editor, Milan</div>
+                        <div class="testimonial-name" id="testimonialName">Isabella Chen</div>
+                        <div class="testimonial-role" id="testimonialRole">Fashion Editor, VOGUE</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- ===== Contact ===== -->
     <section class="section contact-section" id="contact">
         <div class="container">
             <div class="contact-grid">
                 <div class="reveal-left">
-                    <span class="section-label" data-i18n="contact_label">Get in Touch</span>
-                    <h2 class="section-title">Let's Create <em data-i18n="contact_title_em">Together</em></h2>
-                    <p class="section-desc" data-i18n="contact_desc">Whether you're seeking styling advice, collaboration opportunities, or have a question about our collection — we're here to help.</p>
+                    <span class="section-label" id="contactLabel">Get in Touch</span>
+                    <h2 class="section-title" id="contactTitle">Let's Start a <em>Conversation</em></h2>
+                    <p class="section-desc" id="contactDesc">Whether you have a question, need styling advice, or want to discuss a collaboration.</p>
+
                     <div class="contact-info">
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
                             <div>
-                                <h4 data-i18n="contact_whatsapp">WhatsApp</h4>
-                                <a href="https://wa.me/8618363882260" target="_blank" rel="noopener">+86 183 6388 2260</a>
+                                <h4 id="contactC1t">WhatsApp</h4>
+                                <p id="contactWhatsapp"><a href="#">+86 183 6388 2260</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div>
-                                <h4 data-i18n="contact_email">Email</h4>
-                                <a href="mailto:EstheerEagler@gmail.com">EstheerEagler@gmail.com</a>
+                                <h4 id="contactC2t">Email</h4>
+                                <p id="contactEmail"><a href="#">EstheerEagler@gmail.com</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-clock"></i></div>
                             <div>
-                                <h4 data-i18n="contact_hours">Hours</h4>
-                                <p data-i18n="contact_hours_text">Monday — Sunday · 9:00 — 21:00</p>
+                                <h4 id="contactC3t">Store Hours</h4>
+                                <p id="contactHours">Mon — Sun · 9:00 — 21:00</p>
                             </div>
                         </div>
                     </div>
+
                     <div class="response-promise">
                         <div class="icon"><i class="fas fa-bolt"></i></div>
                         <div>
-                            <h4 data-i18n="contact_promise_title">12-Hour Reply Promise</h4>
-                            <p data-i18n="contact_promise_desc">Online consultation available anytime. We guarantee a personal response within 12 hours.</p>
+                            <h4 id="promiseT">12-Hour Response Promise</h4>
+                            <p id="promiseD">We reply to every message within 12 hours.</p>
                         </div>
                     </div>
                 </div>
-                <div class="contact-map reveal-right">
+
+                <div class="contact-map reveal-right" id="contactMap">
                     <div class="map-placeholder">
                         <div>
                             <i class="fas fa-map-marker-alt"></i>
-                            <p data-i18n="contact_map_placeholder">Google Maps — embed your store location here</p>
+                            <p>Google Map — configure in admin panel</p>
                         </div>
                     </div>
                 </div>
@@ -285,44 +879,43 @@
         </div>
     </section>
 
-    <!-- Privacy Policy -->
+    <!-- ===== Privacy Policy ===== -->
     <section class="section privacy-section" id="privacy">
         <div class="container">
             <div class="privacy-content reveal">
-                <h2 data-i18n="privacy_title">Privacy Policy</h2>
-                <p data-i18n="privacy_intro">At Sean's STORE, we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and safeguard your information.</p>
-                <h3 data-i18n="privacy_h1">1. Information We Collect</h3>
-                <p data-i18n="privacy_h1_desc">We may collect contact information you voluntarily provide (such as your name, email, or WhatsApp number) when you reach out to us. We also collect anonymous analytics data to improve your browsing experience.</p>
-                <h3 data-i18n="privacy_h2">2. Use of Cookies</h3>
-                <p data-i18n="privacy_h2_desc">Our website uses cookies and similar technologies to enhance your experience, analyze traffic, and personalize content. You can control cookie preferences through your browser settings or the cookie banner on this site.</p>
-                <h3 data-i18n="privacy_h3">3. How We Use Your Information</h3>
+                <h2>Privacy Policy</h2>
+                <p><strong>Last updated: August 2026</strong></p>
+                <h3>1. Information We Collect</h3>
+                <p>We may collect contact information you voluntarily provide (such as your name, email, or WhatsApp number) when you reach out to us. We also collect anonymous analytics data to improve your browsing experience.</p>
+                <h3>2. Use of Cookies</h3>
+                <p>Our website uses cookies and similar technologies to enhance your experience, analyze traffic, and personalize content. You can control cookie preferences through your browser settings or the cookie banner on this site.</p>
+                <h3>3. How We Use Your Information</h3>
                 <ul>
-                    <li data-i18n="privacy_h3_l1">To respond to your inquiries and provide customer support</li>
-                    <li data-i18n="privacy_h3_l2">To improve our website, content, and services</li>
-                    <li data-i18n="privacy_h3_l3">To send occasional updates (only with your consent)</li>
-                    <li data-i18n="privacy_h3_l4">To comply with legal obligations</li>
+                    <li>To respond to your inquiries and provide customer support</li>
+                    <li>To improve our website, content, and services</li>
+                    <li>To send occasional updates (only with your consent)</li>
+                    <li>To comply with legal obligations</li>
                 </ul>
-                <h3 data-i18n="privacy_h4">4. Data Protection</h3>
-                <p data-i18n="privacy_h4_desc">We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
-                <h3 data-i18n="privacy_h5">5. Your Rights</h3>
-                <p data-i18n="privacy_h5_desc">You have the right to access, correct, or delete your personal data, and to withdraw consent at any time. To exercise these rights, please contact us.</p>
-                <h3 data-i18n="privacy_h6">6. Contact Us</h3>
-                <p data-i18n="privacy_h6_desc">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:EstheerEagler@gmail.com">EstheerEagler@gmail.com</a> or via WhatsApp at +86 183 6388 2260.</p>
-                <p style="margin-top:32px;font-size:0.78rem;color:var(--text-muted);" data-i18n="privacy_lastupdate">Last updated: August 2026</p>
+                <h3>4. Data Protection</h3>
+                <p>We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.</p>
+                <h3>5. Your Rights</h3>
+                <p>You have the right to access, correct, or delete your personal data, and to withdraw consent at any time. To exercise these rights, please contact us.</p>
+                <h3>6. Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:EstheerEagler@gmail.com">EstheerEagler@gmail.com</a> or via WhatsApp at +86 183 6388 2260.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== Footer ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-brand-logo">
-                        <img src="assets/logo.jpg" alt="Sean's STORE">
+                        <img src="logo.jpg" alt="Sean's STORE">
                         <h3>Sean's <span>STORE</span></h3>
                     </div>
-                    <p data-i18n="footer_brand_desc">Curated luxury fashion and sustainable lifestyle. Where taste meets timeless elegance.</p>
+                    <p id="footerAbout">Curated luxury fashion and sustainable lifestyle.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -331,55 +924,47 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4 data-i18n="footer_navigate">Navigate</h4>
-                    <ul>
-                        <li><a href="#home" data-i18n="nav_home">Home</a></li>
-                        <li><a href="#editorial" data-i18n="nav_editorial">Editorial</a></li>
-                        <li><a href="#story" data-i18n="nav_story">Story</a></li>
-                        <li><a href="#collection" data-i18n="nav_collection">Collection</a></li>
-                        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-                    </ul>
+                    <h4 id="footerNavTitle">Navigation</h4>
+                    <ul id="footerNav"></ul>
                 </div>
                 <div class="footer-col">
-                    <h4 data-i18n="footer_contact">Contact</h4>
-                    <ul>
-                        <li><a href="https://wa.me/8618363882260" target="_blank" rel="noopener">WhatsApp: +86 183 6388 2260</a></li>
-                        <li><a href="mailto:EstheerEagler@gmail.com">EstheerEagler@gmail.com</a></li>
-                        <li data-i18n="footer_hours">Mon — Sun · 9:00 — 21:00</li>
-                    </ul>
+                    <h4 id="footerContactTitle">Contact</h4>
+                    <ul id="footerContactInfo"></ul>
                 </div>
                 <div class="footer-col">
-                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <h4 id="footerFollowTitle">Follow Us</h4>
                     <ul>
-                        <li><a href="#privacy" data-i18n="nav_privacy">Privacy Policy</a></li>
-                        <li><a href="admin.html" data-i18n="footer_admin">Admin Login</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="admin.html">Admin Login</a></li>
+                        <li><a href="#privacy" id="footerPrivacyLink">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; <span id="footerYear"></span> Sean's STORE. <span data-i18n="footer_rights">All rights reserved.</span></span>
-                <span data-i18n="footer_made">Curated with taste & elegance.</span>
+                <span id="footerRights">© 2026 Sean's STORE. All rights reserved.</span>
+                <span>Curated with taste & elegance.</span>
             </div>
         </div>
     </footer>
 
-    <!-- Cookie Banner -->
+    <!-- ===== Cookie Banner ===== -->
     <div class="cookie-banner" id="cookieBanner">
-        <h4 data-i18n="cookie_title">We Value Your Privacy</h4>
-        <p><span data-i18n="cookie_text">We use cookies to enhance your browsing experience and analyze site traffic. By continuing, you agree to our </span><a href="#privacy" data-i18n="cookie_link">Privacy Policy</a>.</p>
+        <h4 id="cookieTitle">We Value Your Privacy</h4>
+        <p id="cookieText">We use cookies to enhance your browsing experience. <a href="#privacy">Privacy Policy</a></p>
         <div class="cookie-btns">
-            <button class="cookie-btn decline" onclick="handleCookie(false)" data-i18n="cookie_decline">Decline</button>
-            <button class="cookie-btn accept" onclick="handleCookie(true)" data-i18n="cookie_accept">Accept All</button>
+            <button class="cookie-btn decline" id="cookieDecline" onclick="declineCookies()">Decline</button>
+            <button class="cookie-btn accept" id="cookieAccept" onclick="acceptCookies()">Accept All</button>
         </div>
     </div>
 
-    <!-- Article Modal -->
-    <div class="modal-overlay" id="articleModal" onclick="closeModal(event)">
-        <button class="modal-close" onclick="closeArticleModal()"><i class="fas fa-times"></i></button>
+    <!-- ===== Article Modal ===== -->
+    <div class="modal-overlay" id="articleModal">
+        <button class="modal-close" onclick="closeArticle()"><i class="fas fa-times"></i></button>
         <div class="modal">
             <div class="modal-cover" id="modalCover"></div>
             <div class="modal-body">
-                <span class="modal-cat" id="modalCategory"></span>
+                <span class="modal-cat" id="modalCat"></span>
                 <h2 id="modalTitle"></h2>
                 <div class="modal-meta">
                     <span id="modalDate"></span>
@@ -390,6 +975,73 @@
         </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <script>
+/* ============================================
+   Sean's STORE — Frontend Logic
+   i18n · CMS Data · Article Modal · Cookie
+   ============================================ */
+
+const DEFAULT_DATA = {
+  articles: [
+    {id:1,title:{en:"The Art of Timeless Elegance",zh:"永恒优雅的艺术"},excerpt:{en:"Exploring how minimalist design and quality craftsmanship define modern luxury.",zh:"探索极简设计与精湛工艺如何定义现代奢华。"},content:{en:"<p>In a world driven by fast fashion and fleeting trends, the concept of timeless elegance stands as a beacon of intentional living. True luxury is not about logos or seasonal hype — it is about pieces that transcend time, crafted with materials that age gracefully and designs that remain relevant decade after decade.</p><p>The modern connoisseur understands that quality is an investment. Each garment tells a story of its maker, of the hands that shaped it, of the traditions passed down through generations. This is the philosophy that guides every curation decision at Sean's STORE.</p><p>We believe in fewer, better things. In a wardrobe built on foundations rather than fads. In the quiet confidence that comes from wearing something truly exceptional. This is sustainable fashion in its purest form — pieces designed to be loved, repaired, and passed on.</p>",zh:"<p>在一个被快时尚和短暂趋势驱动的世界里，永恒优雅的概念是一种有意图生活的灯塔。真正的奢华不在于标志或季节性炒作，而在于那些超越时间的作品。</p>"},category:"editorial",size:"large",date:"2026-08-15",cover:""},
+    {id:2,title:{en:"Korean Minimalism Meets Western Tailoring",zh:"韩式极简与西方剪裁的相遇"},excerpt:{en:"A cross-cultural dialogue in contemporary fashion design.",zh:"当代时尚设计中的跨文化对话。"},content:{en:"<p>The fusion of Korean minimalist aesthetics with Western tailoring traditions has produced some of the most exciting silhouettes in contemporary fashion.</p>",zh:"<p>韩式极简美学与西方剪裁传统的融合，产生了当代时尚中一些最令人兴奋的轮廓。</p>"},category:"style",size:"medium",date:"2026-08-10",cover:""},
+    {id:3,title:{en:"Sustainable Fabrics: The New Luxury",zh:"可持续面料：新奢华"},excerpt:{en:"Organic cotton, recycled cashmere, and the future of ethical textiles.",zh:"有机棉、再生羊绒以及道德纺织品的未来。"},content:{en:"<p>The textile industry is undergoing a quiet revolution. Sustainable fabrics are no longer a compromise — they are the new standard of excellence.</p>",zh:"<p>纺织业正在经历一场悄然的革命。可持续面料不再是一种妥协——它们是卓越的新标准。</p>"},category:"sustainability",size:"small",date:"2026-08-05",cover:""},
+    {id:4,title:{en:"The Curated Wardrobe: Less is More",zh:"精选衣橱：少即是多"},excerpt:{en:"Building a capsule collection that works for every occasion.",zh:"打造适用于任何场合的胶囊系列。"},content:{en:"<p>The concept of the curated wardrobe has never been more relevant. In an age of overwhelming choice, the intentional act of editing is both liberating and deeply stylish.</p>",zh:"<p>精选衣橱的概念从未如此重要。在一个选择过载的时代，有意识的编辑行为既是解放，也是深度时尚。</p>"},category:"lifestyle",size:"small",date:"2026-07-28",cover:""},
+    {id:5,title:{en:"Art in Fashion: When Clothing Becomes Canvas",zh:"时尚中的艺术：当服装成为画布"},excerpt:{en:"The intersection of visual art and haute couture.",zh:"视觉艺术与高级定制的交汇。"},content:{en:"<p>Fashion has always been a form of wearable art, but the dialogue between the gallery and the atelier has never been more vibrant.</p>",zh:"<p>时尚一直是可穿戴艺术的一种形式，但画廊与工作室之间的对话从未如此充满活力。</p>"},category:"culture",size:"medium",date:"2026-07-20",cover:""}
+  ],
+  products: [
+    {id:1,name:{en:"Cashmere Overcoat",zh:"羊绒大衣"},category:{en:"Outerwear",zh:"外套"},price:"$1,280",oldPrice:"",tag:"Bestseller",cover:""},
+    {id:2,name:{en:"Silk Blend Blazer",zh:"丝绸混纺西装"},category:{en:"Tailoring",zh:"剪裁"},price:"$890",oldPrice:"$1,150",tag:"New",cover:""},
+    {id:3,name:{en:"Organic Cotton Shirt",zh:"有机棉衬衫"},category:{en:"Essentials",zh:"基础款"},price:"$240",oldPrice:"",tag:"",cover:""},
+    {id:4,name:{en:"Wool Wide-Leg Trousers",zh:"羊毛阔腿裤"},category:{en:"Bottoms",zh:"下装"},price:"$460",oldPrice:"",tag:"Limited",cover:""}
+  ],
+  settings: {whatsapp:"+86 183 6388 2260",email:"EstheerEagler@gmail.com",replyHours:"12",hours:"Mon — Sun · 9:00 — 21:00",mapEmbed:""}
+};
+
+const I18N = {
+  en: {nav:{home:"Home",editorial:"Editorial",story:"Story",collection:"Collection",contact:"Contact"},hero:{eyebrow:"Curated Luxury · Sustainable Style",title1:"Where Taste Meets",title2:"Timeless Elegance",subtitle:"A curated destination for the modern connoisseur — sustainable fashion, editorial aesthetics, and pieces that tell a story.",cta:"Explore the Collection"},marquee:["Sustainable Fashion","Editorial Curation","Timeless Design","Artistic Aesthetics","Luxury Lifestyle"],editorial:{label:"Featured Editorial",title:"Stories That",titleEm:"Inspire",desc:"Thoughtful essays on style, culture, and the art of living well."},story:{label:"Our Story",title:"A Vision of",titleEm:"Intentional Luxury",p1:"Sean's STORE was born from a simple belief: that true luxury is found not in excess, but in curation.",p2:"Every item in our collection is chosen with intention.",f1t:"Curated Excellence",f1d:"Every piece hand-selected for quality and character.",f2t:"Sustainable First",f2d:"Ethical materials and responsible production always.",f3t:"Timeless Design",f3d:"Pieces that transcend seasons and trends.",badge:"Est. 2024"},collection:{label:"The Collection",title:"Pieces That",titleEm:"Define You",desc:"A carefully edited selection of garments and accessories."},stats:{s1n:"500+",s1l:"Curated Pieces",s2n:"50+",s2l:"Artisan Partners",s3n:"100%",s3l:"Sustainable",s4n:"12h",s4l:"Response Time"},testimonial:{quote:"Sean's STORE has redefined what sustainable luxury means to me. Every piece feels like a discovery.",name:"Isabella Chen",role:"Fashion Editor, VOGUE"},contact:{label:"Get in Touch",title:"Let's Start a",titleEm:"Conversation",desc:"Whether you have a question, need styling advice, or want to discuss a collaboration.",c1t:"WhatsApp",c2t:"Email",c3t:"Store Hours",promiseT:"12-Hour Response Promise",promiseD:"We reply to every message within 12 hours."},footer:{about:"A curated destination for sustainable luxury fashion.",nav:"Navigation",contact:"Contact",follow:"Follow Us",rights:"© 2026 Sean's STORE. All rights reserved.",privacy:"Privacy Policy"},cookie:{title:"We Value Your Privacy",text:"We use cookies to enhance your browsing experience.",accept:"Accept All",decline:"Decline"}},
+  zh: {nav:{home:"首页",editorial:"编辑精选",story:"品牌故事",collection:"精选系列",contact:"联系我们"},hero:{eyebrow:"精选奢华 · 可持续风格",title1:"品味与",title2:"永恒优雅的交汇",subtitle:"为现代鉴赏家打造的精选目的地——可持续时尚、编辑美学，以及有故事的作品。",cta:"探索精选系列"},marquee:["可持续时尚","编辑策展","永恒设计","艺术美学","奢华生活"],editorial:{label:"精选文章",title:"激发灵感的",titleEm:"故事",desc:"关于风格、文化和精致生活艺术的深度文章。"},story:{label:"品牌故事",title:"有意图的",titleEm:"奢华愿景",p1:"Sean's STORE 源于一个简单的信念：真正的奢华不在于过剩，而在于精选。",p2:"我们系列中的每一件都是有意选择的。",f1t:"精选卓越",f1d:"每一件都经过手工挑选，追求品质与个性。",f2t:"可持续优先",f2d:"始终使用道德材料和负责任的生产。",f3t:"永恒设计",f3d:"超越季节和潮流的作品。",badge:"创立于 2024"},collection:{label:"精选系列",title:"定义你的",titleEm:"作品",desc:"精心编辑的服装与配饰精选。"},stats:{s1n:"500+",s1l:"精选作品",s2n:"50+",s2l:"工匠合作伙伴",s3n:"100%",s3l:"可持续",s4n:"12小时",s4l:"响应时间"},testimonial:{quote:"Sean's STORE 重新定义了可持续奢华对我的意义。每一件作品都像一次发现。",name:"陈伊莎贝拉",role:"VOGUE 时尚编辑"},contact:{label:"联系我们",title:"让我们开始",titleEm:"对话",desc:"无论您对某件作品有疑问、需要造型建议，还是想讨论合作。",c1t:"WhatsApp",c2t:"电子邮箱",c3t:"营业时间",promiseT:"12小时回复承诺",promiseD:"我们在12小时内回复每一条消息。"},footer:{about:"可持续奢华时尚的精选目的地。",nav:"导航",contact:"联系方式",follow:"关注我们",rights:"© 2026 Sean's STORE 版权所有",privacy:"隐私政策"},cookie:{title:"我们重视您的隐私",text:"我们使用 Cookie 来增强您的浏览体验。",accept:"全部接受",decline:"拒绝"}}
+};
+
+let currentLang = localStorage.getItem('seans_lang') || 'en';
+let cmsData = null;
+
+function loadData(){const saved=localStorage.getItem('seans_cms_data');if(saved){try{cmsData=JSON.parse(saved)}catch(e){cmsData=JSON.parse(JSON.stringify(DEFAULT_DATA))}}else{cmsData=JSON.parse(JSON.stringify(DEFAULT_DATA))}}
+function saveData(){localStorage.setItem('seans_cms_data',JSON.stringify(cmsData))}
+function t(key){const keys=key.split('.');let val=I18N[currentLang];for(const k of keys){val=val?val[k]:undefined}return val||key}
+function getArticleField(a,f){return a[f]&&a[f][currentLang]?a[f][currentLang]:a[f].en}
+function getProductField(p,f){return p[f]&&p[f][currentLang]?p[f][currentLang]:p[f].en}
+function formatDate(d){if(!d)return'';const date=new Date(d);return currentLang==='zh'?`${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日`:date.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}
+
+function setLanguage(lang){currentLang=lang;localStorage.setItem('seans_lang',lang);document.documentElement.lang=lang==='zh'?'zh-CN':'en';renderAll();const btn=document.querySelector('.lang-btn');if(btn)btn.textContent=lang==='en'?'中文 / EN':'EN / 中文'}
+function toggleLanguage(){setLanguage(currentLang==='en'?'zh':'en')}
+
+function renderNav(){const n=t('nav');document.getElementById('navLinks').innerHTML=`<li><a href="#home" class="active">${n.home}</a></li><li><a href="#editorial">${n.editorial}</a></li><li><a href="#story">${n.story}</a></li><li><a href="#collection">${n.collection}</a></li><li><a href="#contact">${n.contact}</a></li>`;const m=document.getElementById('mobileMenu');if(m)m.innerHTML=`<button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button><a href="#home" onclick="closeMobileMenu()">${n.home}</a><a href="#editorial" onclick="closeMobileMenu()">${n.editorial}</a><a href="#story" onclick="closeMobileMenu()">${n.story}</a><a href="#collection" onclick="closeMobileMenu()">${n.collection}</a><a href="#contact" onclick="closeMobileMenu()">${n.contact}</a>`}
+function renderHero(){const h=t('hero');document.getElementById('heroEyebrow').textContent=h.eyebrow;document.getElementById('heroTitle1').textContent=h.title1;document.getElementById('heroTitle2').innerHTML=`<em>${h.title2}</em>`;document.getElementById('heroSubtitle').textContent=h.subtitle;document.getElementById('heroCta').innerHTML=`${h.cta} <i class="fas fa-arrow-right"></i>`}
+function renderMarquee(){const items=t('marquee');let html='';for(let i=0;i<2;i++){items.forEach(item=>{html+=`<span class="marquee-item">${item}</span>`})}document.getElementById('marqueeTrack').innerHTML=html}
+function renderEditorial(){const e=t('editorial');document.getElementById('editorialLabel').textContent=e.label;document.getElementById('editorialTitle').innerHTML=`${e.title} <em>${e.titleEm}</em>`;document.getElementById('editorialDesc').textContent=e.desc;const grid=document.getElementById('editorialGrid');let html='';cmsData.articles.forEach(a=>{const title=getArticleField(a,'title');const excerpt=getArticleField(a,'excerpt');const cat=a.category.charAt(0).toUpperCase()+a.category.slice(1);const cover=a.cover?`<img src="${a.cover}" alt="${title}" onerror="this.style.display='none'">`:'';html+=`<article class="editorial-card ${a.size||'medium'} reveal" onclick="openArticle(${a.id})"><div class="editorial-card-img">${cover}</div><div class="editorial-card-overlay"><span class="editorial-card-cat">${cat}</span><h3 class="editorial-card-title">${title}</h3><p class="editorial-card-excerpt">${excerpt}</p><div class="editorial-card-meta"><span>${formatDate(a.date)}</span></div></div><div class="editorial-card-arrow"><i class="fas fa-arrow-right"></i></div></article>`});grid.innerHTML=html;initReveal()}
+function renderStory(){const s=t('story');document.getElementById('storyLabel').textContent=s.label;document.getElementById('storyTitle').innerHTML=`${s.title} <em>${s.titleEm}</em>`;document.getElementById('storyP1').textContent=s.p1;document.getElementById('storyP2').textContent=s.p2;document.getElementById('storyF1t').textContent=s.f1t;document.getElementById('storyF1d').textContent=s.f1d;document.getElementById('storyF2t').textContent=s.f2t;document.getElementById('storyF2d').textContent=s.f2d;document.getElementById('storyF3t').textContent=s.f3t;document.getElementById('storyF3d').textContent=s.f3d;document.getElementById('storyBadge').textContent=s.badge}
+function renderCollection(){const c=t('collection');document.getElementById('collectionLabel').textContent=c.label;document.getElementById('collectionTitle').innerHTML=`${c.title} <em>${c.titleEm}</em>`;document.getElementById('collectionDesc').textContent=c.desc;const grid=document.getElementById('collectionGrid');let html='';cmsData.products.forEach(p=>{const name=getProductField(p,'name');const cat=getProductField(p,'category');const tag=p.tag?`<span class="product-tag">${p.tag}</span>`:'';const old=p.oldPrice?`<span>${p.oldPrice}</span>`:'';const cover=p.cover?`<img src="${p.cover}" alt="${name}" onerror="this.style.display='none'">`:'';html+=`<div class="product-card reveal"><div class="product-img">${tag}${cover}</div><div class="product-info"><div class="product-cat">${cat}</div><h3 class="product-name">${name}</h3><div class="product-price">${old}${p.price}</div></div></div>`});grid.innerHTML=html;initReveal()}
+function renderStats(){const s=t('stats');['1','2','3','4'].forEach(i=>{document.getElementById('stat'+i+'n').textContent=s['s'+i+'n'];document.getElementById('stat'+i+'l').textContent=s['s'+i+'l']})}
+function renderTestimonial(){const tm=t('testimonial');document.getElementById('testimonialQuote').textContent=tm.quote;document.getElementById('testimonialName').textContent=tm.name;document.getElementById('testimonialRole').textContent=tm.role}
+function renderContact(){const c=t('contact');const s=cmsData.settings;document.getElementById('contactLabel').textContent=c.label;document.getElementById('contactTitle').innerHTML=`${c.title} <em>${c.titleEm}</em>`;document.getElementById('contactDesc').textContent=c.desc;document.getElementById('contactWhatsapp').innerHTML=`<a href="https://wa.me/${s.whatsapp.replace(/[^0-9]/g,'')}" target="_blank">${s.whatsapp}</a>`;document.getElementById('contactEmail').innerHTML=`<a href="mailto:${s.email}">${s.email}</a>`;document.getElementById('contactHours').textContent=s.hours;document.getElementById('contactC1t').textContent=c.c1t;document.getElementById('contactC2t').textContent=c.c2t;document.getElementById('contactC3t').textContent=c.c3t;document.getElementById('promiseT').textContent=`${s.replyHours}-Hour Response Promise`;document.getElementById('promiseD').textContent=c.promiseD;const map=document.getElementById('contactMap');if(map){if(s.mapEmbed){map.innerHTML=`<iframe src="${s.mapEmbed}" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`}else{map.innerHTML=`<div class="map-placeholder"><div><i class="fas fa-map-marker-alt"></i><p style="color:rgba(255,255,255,0.4);font-size:0.85rem;">Google Map — configure in admin panel</p></div></div>`}}}
+function renderFooter(){const f=t('footer');const s=cmsData.settings;const n=t('nav');document.getElementById('footerAbout').textContent=f.about;document.getElementById('footerNavTitle').textContent=f.nav;document.getElementById('footerContactTitle').textContent=f.contact;document.getElementById('footerFollowTitle').textContent=f.follow;document.getElementById('footerRights').textContent=f.rights;document.getElementById('footerPrivacyLink').textContent=f.privacy;document.getElementById('footerNav').innerHTML=`<li><a href="#home">${n.home}</a></li><li><a href="#editorial">${n.editorial}</a></li><li><a href="#story">${n.story}</a></li><li><a href="#collection">${n.collection}</a></li><li><a href="#contact">${n.contact}</a></li>`;document.getElementById('footerContactInfo').innerHTML=`<li><a href="https://wa.me/${s.whatsapp.replace(/[^0-9]/g,'')}" target="_blank"><i class="fab fa-whatsapp"></i> ${s.whatsapp}</a></li><li><a href="mailto:${s.email}"><i class="fas fa-envelope"></i> ${s.email}</a></li>`}
+function renderCookie(){const c=t('cookie');document.getElementById('cookieTitle').textContent=c.title;document.getElementById('cookieText').innerHTML=`${c.text} <a href="#privacy">${t('footer.privacy')}</a>`;document.getElementById('cookieAccept').textContent=c.accept;document.getElementById('cookieDecline').textContent=c.decline}
+function renderAll(){renderNav();renderHero();renderMarquee();renderEditorial();renderStory();renderCollection();renderStats();renderTestimonial();renderContact();renderFooter();renderCookie();updateMetaTags()}
+function updateMetaTags(){const lang=currentLang==='zh'?'zh-CN':'en';document.documentElement.lang=lang;document.title=currentLang==='zh'?"Sean's STORE — 可持续奢华时尚杂志":"Sean's STORE — Sustainable Luxury Fashion Magazine"}
+
+function openArticle(id){const a=cmsData.articles.find(x=>x.id===id);if(!a)return;const title=getArticleField(a,'title');const content=getArticleField(a,'content');const cat=a.category.charAt(0).toUpperCase()+a.category.slice(1);const cover=a.cover?`<img src="${a.cover}" alt="${title}">`:'';document.getElementById('modalCover').innerHTML=cover;document.getElementById('modalCat').textContent=cat;document.getElementById('modalTitle').textContent=title;document.getElementById('modalDate').textContent=formatDate(a.date);document.getElementById('modalContent').innerHTML=content;document.getElementById('articleModal').classList.add('open');document.body.style.overflow='hidden'}
+function closeArticle(){document.getElementById('articleModal').classList.remove('open');document.body.style.overflow=''}
+function openMobileMenu(){document.getElementById('mobileMenu').classList.add('open');document.body.style.overflow='hidden'}
+function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open');document.body.style.overflow=''}
+function showCookieBanner(){if(!localStorage.getItem('seans_cookie_consent')){setTimeout(()=>{document.getElementById('cookieBanner').classList.add('show')},1500)}}
+function acceptCookies(){localStorage.setItem('seans_cookie_consent','accepted');document.getElementById('cookieBanner').classList.remove('show')}
+function declineCookies(){localStorage.setItem('seans_cookie_consent','declined');document.getElementById('cookieBanner').classList.remove('show')}
+function initReveal(){const reveals=document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale');const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});reveals.forEach(el=>observer.observe(el))}
+function initNavbarScroll(){const navbar=document.querySelector('.navbar');const navLinks=document.querySelectorAll('.nav-links a');const sections=document.querySelectorAll('section[id]');window.addEventListener('scroll',()=>{if(window.scrollY>50){navbar.classList.add('scrolled')}else{navbar.classList.remove('scrolled')}let current='';sections.forEach(section=>{const sectionTop=section.offsetTop-120;if(window.scrollY>=sectionTop)current=section.getAttribute('id')});navLinks.forEach(link=>{link.classList.remove('active');if(link.getAttribute('href')===`#${current}`)link.classList.add('active')})})}
+function initSmoothScroll(){document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const target=document.querySelector(this.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}})})}
+
+document.addEventListener('DOMContentLoaded',()=>{loadData();setLanguage(currentLang);initNavbarScroll();initSmoothScroll();initReveal();showCookieBanner();document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeArticle();closeMobileMenu()}});document.getElementById('articleModal').addEventListener('click',e=>{if(e.target.id==='articleModal')closeArticle()})});
+    </script>
 </body>
 </html>
