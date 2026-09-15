@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ivan.miller - Logo SVG Code</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', serif;
+    background: #f0f0f0;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; color: #333; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+
+  .preview-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+  .preview-card h2 {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .logo-preview {
+    display: inline-block;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .code-section {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+  }
+  .code-section h3 {
+    color: #4ec9b0;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    font-family: 'Consolas', monospace;
+  }
+  .code-section pre {
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    white-space: pre;
+  }
+  .copy-btn {
+    background: #4ec9b0;
+    color: #1e1e1e;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  .copy-btn:hover { background: #5dd9c0; }
+
+  .usage-section {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .usage-section h2 { font-size: 1.1rem; margin-bottom: 16px; color: #333; }
+  .usage-section ol { padding-left: 20px; color: #555; line-height: 2; }
+  .usage-section code {
+    background: #f4f4f4;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #c7254e;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Ivan.miller — Logo SVG Code</h1>
+  <p class="subtitle">纯 SVG 代码 Logo，可直接嵌入你的 index.html，无需图片文件</p>
+
+  <!-- ===== Logo 预览 ===== -->
+  <div class="preview-card">
+    <h2>Preview / 预览效果</h2>
+    <div class="logo-preview">
+      <!-- ===== IVAN.MILLER LOGO SVG ===== -->
+      <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ivan.miller Logo">
+        <defs>
+          <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FAF6EF"/>
+            <stop offset="100%" style="stop-color:#F2EBDD"/>
+          </linearGradient>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#B8944F"/>
+            <stop offset="50%" style="stop-color:#D4B87A"/>
+            <stop offset="100%" style="stop-color:#B8944F"/>
+          </linearGradient>
+          <linearGradient id="navyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#1F3A5F"/>
+            <stop offset="100%" style="stop-color:#142944"/>
+          </linearGradient>
+        </defs>
+
+        <!-- 背景 -->
+        <rect width="400" height="520" fill="url(#bgGrad)"/>
+
+        <!-- 顶部装饰线 + 菱形 -->
+        <g transform="translate(200, 140)">
+          <line x1="-130" y1="0" x2="-20" y2="0" stroke="url(#goldGrad)" stroke-width="1.2"/>
+          <line x1="20" y1="0" x2="130" y2="0" stroke="url(#goldGrad)" stroke-width="1.2"/>
+          <polygon points="0,-10 7,0 0,10 -7,0" fill="url(#goldGrad)"/>
+          <polygon points="0,-5 3.5,0 0,5 -3.5,0" fill="#FAF6EF"/>
+        </g>
+
+        <!-- IM 字母 -->
+        <g transform="translate(200, 290)" text-anchor="middle">
+          <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="180" font-weight="bold" fill="url(#navyGrad)" letter-spacing="-4">IM</text>
+        </g>
+
+        <!-- 底部装饰线 + 菱形 -->
+        <g transform="translate(200, 395)">
+          <line x1="-130" y1="0" x2="-20" y2="0" stroke="url(#goldGrad)" stroke-width="1.2"/>
+          <line x1="20" y1="0" x2="130" y2="0" stroke="url(#goldGrad)" stroke-width="1.2"/>
+          <polygon points="0,-10 7,0 0,10 -7,0" fill="url(#goldGrad)"/>
+          <polygon points="0,-5 3.5,0 0,5 -3.5,0" fill="#FAF6EF"/>
+        </g>
+
+        <!-- SUSTAINABLE LUXURY FASHION 文字 -->
+        <text x="200" y="440" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="normal" fill="#3A4A5C" letter-spacing="4">SUSTAINABLE LUXURY FASHION</text>
+
+        <!-- 最底部小装饰 -->
+        <g transform="translate(200, 475)">
+          <line x1="-50" y1="0" x2="-10" y2="0" stroke="url(#goldGrad)" stroke-width="0.8"/>
+          <line x1="10" y1="0" x2="50" y2="0" stroke="url(#goldGrad)" stroke-width="0.8"/>
+          <polygon points="0,-4 3,0 0,4 -3,0" fill="url(#goldGrad)"/>
+        </g>
+      </svg>
+      <!-- ===== END LOGO SVG ===== -->
+    </div>
+  </div>
+
+  <!-- ===== SVG 代码 ===== -->
+  <div class="code-section">
+    <h3>&lt;!-- SVG Logo Code - 复制以下代码到你的 HTML --&gt;</h3>
+    <button class="copy-btn" onclick="copyCode()">Copy Code / 复制代码</button>
+    <pre id="svgCode">&lt;svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ivan.miller Logo" style="max-width:100%;height:auto;display:block;"&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%"&gt;
+      &lt;stop offset="0%" style="stop-color:#FAF6EF"/&gt;
+      &lt;stop offset="100%" style="stop-color:#F2EBDD"/&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%"&gt;
+      &lt;stop offset="0%" style="stop-color:#B8944F"/&gt;
+      &lt;stop offset="50%" style="stop-color:#D4B87A"/&gt;
+      &lt;stop offset="100%" style="stop-color:#B8944F"/&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id="navyGrad" x1="0%" y1="0%" x2="0%" y2="100%"&gt;
+      &lt;stop offset="0%" style="stop-color:#1F3A5F"/&gt;
+      &lt;stop offset="100%" style="stop-color:#142944"/&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+  &lt;rect width="400" height="520" fill="url(#bgGrad)"/&gt;
+  &lt;g transform="translate(200, 140)"&gt;
+    &lt;line x1="-130" y1="0" x2="-20" y2="0" stroke="url(#goldGrad)" stroke-width="1.2"/&gt;
+    &lt;line x1="20" y1="0" x2="130" y2="0" stroke="url(#goldGrad)" stroke-width="1.2"/&gt;
+    &lt;polygon points="0,-10 7,0 0,10 -7,0" fill="url(#goldGrad)"/&gt;
+    &lt;polygon points="0,-5 3.5,0 0,5 -3.5,0" fill="#FAF6EF"/&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(200, 290)" text-anchor="middle"&gt;
+    &lt;text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="180" font-weight="bold" fill="url(#navyGrad)" letter-spacing="-4"&gt;IM&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(200, 395)"&gt;
+    &lt;line x1="-130" y1="0" x2="-20" y2="0" stroke="url(#goldGrad)" stroke-width="1.2"/&gt;
+    &lt;line x1="20" y1="0" x2="130" y2="0" stroke="url(#goldGrad)" stroke-width="1.2"/&gt;
+    &lt;polygon points="0,-10 7,0 0,10 -7,0" fill="url(#goldGrad)"/&gt;
+    &lt;polygon points="0,-5 3.5,0 0,5 -3.5,0" fill="#FAF6EF"/&gt;
+  &lt;/g&gt;
+  &lt;text x="200" y="440" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#3A4A5C" letter-spacing="4"&gt;SUSTAINABLE LUXURY FASHION&lt;/text&gt;
+  &lt;g transform="translate(200, 475)"&gt;
+    &lt;line x1="-50" y1="0" x2="-10" y2="0" stroke="url(#goldGrad)" stroke-width="0.8"/&gt;
+    &lt;line x1="10" y1="0" x2="50" y2="0" stroke="url(#goldGrad)" stroke-width="0.8"/&gt;
+    &lt;polygon points="0,-4 3,0 0,4 -3,0" fill="url(#goldGrad)"/&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+  </div>
+
+  <!-- ===== 使用说明 ===== -->
+  <div class="usage-section">
+    <h2>How to Use / 使用方法</h2>
+    <ol>
+      <li>点击上方 <strong>Copy Code</strong> 按钮复制 SVG 代码</li>
+      <li>打开你的 <code>index.html</code> 文件</li>
+      <li>在你想显示 Logo 的位置粘贴代码（通常在 header 或 hero 区域）</li>
+      <li>用 <code>&lt;div style="max-width:300px;margin:0 auto;"&gt;...SVG代码...&lt;/div&gt;</code> 包裹来控制大小和居中</li>
+      <li>保存文件，刷新浏览器即可看到 Logo</li>
+    </ol>
+    <p style="margin-top:16px;color:#888;font-size:0.85rem;">
+      提示：如果页面中有多个 SVG，需要把每个 <code>id="bgGrad"</code>、<code>id="goldGrad"</code>、<code>id="navyGrad"</code> 改成不同的 ID 名称，避免冲突。
+    </p>
+  </div>
+</div>
+
+<script>
+function copyCode() {
+  var code = document.getElementById('svgCode').textContent;
+  navigator.clipboard.writeText(code).then(function() {
+    var btn = document.querySelector('.copy-btn');
+    var original = btn.textContent;
+    btn.textContent = 'Copied! 已复制';
+    btn.style.background = '#6dd47e';
+    setTimeout(function() {
+      btn.textContent = original;
+      btn.style.background = '#4ec9b0';
+    }, 2000);
+  }).catch(function() {
+    alert('复制失败，请手动选择代码复制');
+  });
+}
+</script>
+</body>
+</html>
