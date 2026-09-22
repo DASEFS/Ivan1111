@@ -53,7 +53,7 @@
    Palette: Deep Navy + Champagne Gold + Ivory
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
   --navy: #0d1b2a;
@@ -320,17 +320,26 @@ html.js .reveal-scale.visible { opacity: 1; transform: scale(1); }
   font-size: 0.72rem; color: rgba(255,255,255,0.4); letter-spacing: 0.1em;
 }
 .editorial-card-arrow {
-  position: absolute; top: 28px; right: 28px; width: 44px; height: 44px;
-  border-radius: 50%; border: 1px solid rgba(201,169,97,0.4);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--gold); font-size: 0.8rem; transition: all 0.4s var(--ease);
-  background: rgba(13,27,42,0.5); backdrop-filter: blur(10px);
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,169,97,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 0.8rem;
+  transition: all 0.4s var(--ease);
+  background: rgba(13,27,42,0.5);
+  backdrop-filter: blur(10px);
 }
-.editorial-card:hover .editorial-card-arrow {.editorial-card:hover .editorial-card-arrow {
-  background: var(--gold); color: var(--navy); border-color: var(--gold);
-  transform: rotate(-45deg);
-}
-  background: var(--gold); color: var(--navy); border-color: var(--gold);
+.editorial-card:hover .editorial-card-arrow {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
   transform: rotate(-45deg);
 }
 
@@ -666,7 +675,9 @@ html.js .reveal-scale.visible { opacity: 1; transform: scale(1); }
   .editorial-card-overlay { padding: 24px; }
   .editorial-card.large .editorial-card-title { font-size: 1.4rem; }
   .collection-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-}/* ===== Brand Manifesto ===== */
+}
+
+/* ===== Brand Manifesto ===== */
 .manifesto-section {
   background: var(--navy);
   padding: 120px 0;
@@ -820,19 +831,22 @@ html.js .reveal-scale.visible { opacity: 1; transform: scale(1); }
                 </div>
             </div>
         </div>
-    </section><!-- ===== Brand Manifesto ===== -->
+    </section>
+
+    <!-- ===== Brand Manifesto ===== -->
     <section class="manifesto-section">
       <div class="container">
         <div class="manifesto-inner reveal">
           <div class="manifesto-quote">“</div>
           <p class="manifesto-text" id="manifestoText">
             True luxury is not loud. It reveals itself slowly — in the drape of a coat, the weight of a fabric, the quiet confidence of knowing less can be more.
-          </p >
+          </p>
           <div class="manifesto-line"></div>
-          <p class="manifesto-author" id="manifestoAuthor">Sean's STORE · Est. 2024</p >
+          <p class="manifesto-author" id="manifestoAuthor">Sean's STORE · Est. 2024</p>
         </div>
       </div>
     </section>
+
     <!-- ===== Collection ===== -->
     <section class="section collection-section" id="collection">
         <div class="container">
@@ -948,9 +962,9 @@ html.js .reveal-scale.visible { opacity: 1; transform: scale(1); }
                 <h2>Privacy Policy</h2>
                 <p><strong>Last updated: August 2026</strong></p>
                 <h3>1. Information We Collect</h3>
-                <p>We may collect contact information you voluntarily provide (such as your name, email, or WhatsApp number) when you reach out to us. We also collect anonymous analytics data to improve your browsing experience.</p>
+                <p>We may collect contact information you voluntarily provide (such as your name, email, or WhatsApp number) when you reach out to us. We also collect anonymous analytics data to improve our service and user experience.</p>
                 <h3>2. Use of Cookies</h3>
-                <p>Our website uses cookies and similar technologies to enhance your experience, analyze traffic, and personalize content. You can control cookie preferences through your browser settings or the cookie banner on this site.</p>
+                <p>Our website uses cookies and similar technologies to enhance your experience, analyze traffic, and personalize content. You can control cookie preferences through your browser settings.</p>
                 <h3>3. How We Use Your Information</h3>
                 <ul>
                     <li>To respond to your inquiries and provide customer support</li>
@@ -998,119 +1012,220 @@ html.js .reveal-scale.visible { opacity: 1; transform: scale(1); }
                     <ul>
                         <li><a href="#">Instagram</a></li>
                         <li><a href="#">Facebook</a></li>
-                        <li><a href="admin.html">Admin Login</a></li>
-                        <li><a href="#privacy" id="footerPrivacyLink">Privacy Policy</a></li>
+                        <li><a href="https://wa.me/8618363882260" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="mailto:EstheerEagler@gmail.com">Email</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span id="footerRights">© 2026 Sean's STORE. All rights reserved.</span>
-                <span>Curated with taste & elegance.</span>
+                <span>© 2026 Sean's STORE</span>
+                <span>Luxury, Curated.</span>
             </div>
         </div>
     </footer>
 
-    <!-- ===== Cookie Banner ===== -->
     <div class="cookie-banner" id="cookieBanner">
-        <h4 id="cookieTitle">We Value Your Privacy</h4>
-        <p id="cookieText">We use cookies to enhance your browsing experience. <a href="#privacy">Privacy Policy</a></p>
-        <div class="cookie-btns">
-            <button class="cookie-btn decline" id="cookieDecline" onclick="declineCookies()">Decline</button>
-            <button class="cookie-btn accept" id="cookieAccept" onclick="acceptCookies()">Accept All</button>
-        </div>
+      <h4>Cookie Consent</h4>
+      <p>We use cookies to enhance your browsing experience and provide tailored content. By continuing, you accept our <a href="#privacy">Privacy Policy</a>.</p>
+      <div class="cookie-btns">
+        <button class="cookie-btn accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn decline" onclick="declineCookies()">Decline</button>
+      </div>
     </div>
 
-    <!-- ===== Article Modal ===== -->
     <div class="modal-overlay" id="articleModal">
-        <button class="modal-close" onclick="closeArticle()"><i class="fas fa-times"></i></button>
-        <div class="modal">
-            <div class="modal-cover" id="modalCover"></div>
-            <div class="modal-body">
-                <span class="modal-cat" id="modalCat"></span>
-                <h2 id="modalTitle"></h2>
-                <div class="modal-meta">
-                    <span id="modalDate"></span>
-                    <span>Sean's STORE Editorial</span>
-                </div>
-                <div class="modal-content" id="modalContent"></div>
-            </div>
+      <button class="modal-close" aria-label="Close" onclick="closeModal()">✕</button>
+      <div class="modal">
+        <div class="modal-cover">
+          <img id="modalImage" src="logo.jpg" alt="Article cover">
         </div>
+        <div class="modal-body">
+          <span class="modal-cat" id="modalCat">Editorial</span>
+          <h2 id="modalTitle">Title</h2>
+          <div class="modal-meta">
+            <span id="modalMetaDate">June 2026</span>
+            <span id="modalMetaRead">5 min read</span>
+          </div>
+          <div class="modal-content" id="modalContent"></div>
+        </div>
+      </div>
     </div>
 
     <script>
-/* ============================================
-   Sean's STORE — Frontend Logic
-   i18n · CMS Data · Article Modal · Cookie
-   ============================================ */
+      const baseContent = {
+        navItems: [
+          { label: 'Home', href: '#home' },
+          { label: 'Editorial', href: '#editorial' },
+          { label: 'Story', href: '#story' },
+          { label: 'Collection', href: '#collection' },
+          { label: 'Contact', href: '#contact' },
+          { label: 'Privacy', href: '#privacy' }
+        ],
+        marquee: ['Curated Luxury', 'Sustainable Style', 'Timeless Design', 'Editorial Living', 'Quiet Confidence'],
+        editorial: [
+          { category: 'Fashion Notes', title: 'The new language of refined dressing', excerpt: 'Minimal silhouettes, rich textures, and a more intentional wardrobe for everyday life.', date: 'Jun 2026', read: '5 min read', image: 'logo.jpg', content: '<p>Luxury is no longer about excess. It is about intention, tactility, and the confidence that comes from wearing pieces that feel deeply considered.</p><p>In a world shaped by speed, the most compelling wardrobes are the ones that move with clarity. A coat with better structure, a fabric with more depth, a silhouette that carries itself with quiet confidence.</p><p>At Sean’s STORE, that philosophy informs every edit, from the first sketch to the final styling decision.</p>' },
+          { category: 'Style Journal', title: 'Why slow fashion feels premium', excerpt: 'The best pieces are built to be worn often, loved longer, and remembered more clearly.', date: 'May 2026', read: '4 min read', image: 'logo.jpg', content: '<p>Slow fashion is not a slogan. It is a method of attention.</p><p>By favoring craftsmanship, timeless design, and lasting materials, we make room for a wardrobe that ages with elegance instead of chasing novelty.</p><p>Premium design is no longer loud—it is consistent, considered, and personal.</p>' },
+          { category: 'Culture', title: 'The art of understated luxury', excerpt: 'A calmer aesthetic rooted in proportion, texture, and authentic confidence.', date: 'Apr 2026', read: '6 min read', image: 'logo.jpg', content: '<p>Understated luxury feels effortless because it is built on restraint.</p><p>It celebrates proportion, material richness, and the confidence to leave space around a silhouette. That is the quiet elegance Sean’s STORE wants to champion.</p><p>Less noise, more presence: that is the future of taste.</p>' },
+          { category: 'Living', title: 'Dress the room, not just the body', excerpt: 'An editorial approach to personal style that begins with atmosphere and intention.', date: 'Mar 2026', read: '3 min read', image: 'logo.jpg', content: '<p>Style begins long before the outfit is chosen. It starts with the mood of the room, the rhythm of the day, and the kind of energy you want to carry into a space.</p><p>When clothing is selected with that same attention to atmosphere, it becomes more than fashion—it becomes identity.</p>' }
+        ],
+        products: [
+          { category: 'Outerwear', name: 'The Meridian Coat', price: '$420', oldPrice: '$560', tag: 'New', image: 'logo.jpg' },
+          { category: 'Accessories', name: 'Sculpted Leather Tote', price: '$260', oldPrice: '$330', tag: 'Bestseller', image: 'logo.jpg' },
+          { category: 'Essentials', name: 'Ivory Atelier Set', price: '$310', oldPrice: '$390', tag: 'Limited', image: 'logo.jpg' },
+          { category: 'Footwear', name: 'Noir Signature Loafers', price: '$245', oldPrice: '$300', tag: 'Featured', image: 'logo.jpg' }
+        ]
+      };
 
-const DEFAULT_DATA = {
-  articles: [
-    {id:1,title:{en:"The Art of Timeless Elegance",zh:"永恒优雅的艺术"},excerpt:{en:"Exploring how minimalist design and quality craftsmanship define modern luxury.",zh:"探索极简设计与精湛工艺如何定义现代奢华。"},content:{en:"<p>In a world driven by fast fashion and fleeting trends, the concept of timeless elegance stands as a beacon of intentional living. True luxury is not about logos or seasonal hype — it is about pieces that transcend time, crafted with materials that age gracefully and designs that remain relevant decade after decade.</p ><p>The modern connoisseur understands that quality is an investment. Each garment tells a story of its maker, of the hands that shaped it, of the traditions passed down through generations. This is the philosophy that guides every curation decision at Sean's STORE.</p ><p>We believe in fewer, better things. In a wardrobe built on foundations rather than fads. In the quiet confidence that comes from wearing something truly exceptional.</p >",zh:"<p>在一个被快时尚和短暂趋势驱动的世界里，永恒优雅的概念是一种有意图生活的灯塔。真正的奢华不在于标志或季节性炒作，而在于那些超越时间的作品——用会优雅老去的材料制成，设计在几十年后依然成立。</p ><p>现代的鉴赏家明白，品质是一种投资。每一件服装都在讲述制作者的故事，讲述塑造它的双手，讲述代代相传的传统。这正是指导 Sean's STORE 每一次精选决策的哲学。</p ><p>我们相信更少、更好的东西。相信一个建立在基础之上而非潮流之上的衣橱。相信穿上真正卓越之物时那种安静的自信。</p >"},category:"editorial",size:"large",date:"2026-08-15",cover:"article-1.jpg"},
-    {id:2,title:{en:"Korean Minimalism Meets Western Tailoring",zh:"韩式极简与西方剪裁的相遇"},excerpt:{en:"A cross-cultural dialogue in contemporary fashion design.",zh:"当代时尚设计中的跨文化对话。"},content:{en:"<p>The fusion of Korean minimalist aesthetics with Western tailoring traditions has produced some of the most exciting silhouettes in contemporary fashion. Clean lines meet precise construction; restraint meets structure.</p ><p>This dialogue is not about compromise — it is about elevation. The result is clothing that feels both modern and enduring, quiet yet confident.</p ><p>At Sean's STORE we seek pieces that embody this balance: refined enough for the boardroom, soft enough for everyday life.</p >",zh:"<p>韩式极简美学与西方剪裁传统的融合，产生了当代时尚中一些最令人兴奋的轮廓。干净的线条遇见精准的结构，克制遇见骨架。</p ><p>这种对话不是妥协，而是提升。最终的结果是既现代又持久、既安静又自信的服装。</p ><p>在 Sean's STORE，我们寻找体现这种平衡的作品：足够精致可以进入会议室，足够柔软可以融入日常。</p >"},category:"style",size:"medium",date:"2026-08-10",cover:"article-2.jpg"},
-    {id:3,title:{en:"Sustainable Fabrics: The New Luxury",zh:"可持续面料：新奢华"},excerpt:{en:"Organic cotton, recycled cashmere, and the future of ethical textiles.",zh:"有机棉、再生羊绒以及道德纺织品的未来。"},content:{en:"<p>The textile industry is undergoing a quiet revolution. Sustainable fabrics are no longer a compromise — they are the new standard of excellence. Organic cotton, recycled cashmere, and innovative plant-based materials are redefining what luxury feels like against the skin.</p ><p>True sustainability is not a label. It is a practice of care: care for the people who make the cloth, care for the land that grows it, and care for the person who will wear it for years to come.</p >",zh:"<p>纺织业正在经历一场悄然的革命。可持续面料不再是一种妥协——它们是卓越的新标准。有机棉、再生羊绒和创新的植物基材料，正在重新定义奢华贴合肌肤的感觉。</p ><p>真正的可持续不是一个标签，而是一种呵护的实践：呵护织布的人，呵护生长它的土地，呵护将穿着它多年的人。</p >"},category:"sustainability",size:"small",date:"2026-08-05",cover:"article-3.jpg"},
-    {id:4,title:{en:"The Curated Wardrobe: Less is More",zh:"精选衣橱：少即是多"},excerpt:{en:"Building a capsule collection that works for every occasion.",zh:"打造适用于任何场合的胶囊系列。"},content:{en:"<p>The concept of the curated wardrobe has never been more relevant. In an age of overwhelming choice, the intentional act of editing is both liberating and deeply stylish.</p ><p>A well-edited closet is not about restriction. It is about clarity. When every piece has a reason to exist, getting dressed becomes a pleasure rather than a negotiation.</p ><p>We believe the most elegant wardrobes are built slowly, with attention, and with the courage to leave things out.</p >",zh:"<p>精选衣橱的概念从未如此重要。在一个选择过载的时代，有意识的编辑行为既是解放，也是深度时尚。</p ><p>一个编辑良好的衣橱不是关于限制，而是关于清晰。当每一件都有存在的理由，穿衣就变成一种愉悦，而不是一场协商。</p ><p>我们相信最优雅的衣橱是慢慢建立的，带着注意力，也带着舍弃的勇气。</p >"},category:"lifestyle",size:"small",date:"2026-07-28",cover:"article-4.jpg"},
-    {id:5,title:{en:"Art in Fashion: When Clothing Becomes Canvas",zh:"时尚中的艺术：当服装成为画布"},excerpt:{en:"The intersection of visual art and haute couture.",zh:"视觉艺术与高级定制的交汇。"},content:{en:"<p>Fashion has always been a form of wearable art, but the dialogue between the gallery and the atelier has never been more vibrant. When clothing becomes a canvas, the body becomes part of the composition.</p ><p>We look for pieces that carry this artistic intention — not as costume, but as quiet statements that reward a second look.</p >",zh:"<p>时尚一直是可穿戴艺术的一种形式，但画廊与工作室之间的对话从未如此充满活力。当服装成为画布，身体就成为构图的一部分。</p ><p>我们寻找那些携带这种艺术意图的作品——不是作为戏服，而是作为值得再看一眼的安静声明。</p >"},category:"culture",size:"medium",date:"2026-07-20",cover:"article-7.jpg"},
-    {id:10,title:{en:"The Poetry of Soft Tailoring",zh:"柔软剪裁的诗意"},excerpt:{en:"When structure meets ease, clothing becomes a quiet form of expression.",zh:"当结构遇上放松，服装成为一种安静的表达。"},content:{en:"<p>Soft tailoring is the art of holding form without rigidity. It allows the body to move, to breathe, while still presenting a composed silhouette. This is clothing that feels considered rather than constructed.</p ><p>In a time of extremes, the middle path — structured yet soft, refined yet approachable — has become the most compelling expression of modern elegance.</p >",zh:"<p>柔软剪裁是一种在不僵硬的前提下保持形态的艺术。它允许身体活动、呼吸，同时依然呈现出得体的轮廓。这是一种感觉被认真对待而非被构建的服装。</p ><p>在极端的时代，中间道路——既有结构又柔软，既精致又亲近——成为了现代优雅最有说服力的表达。</p >"},category:"style",size:"medium",date:"2026-09-15",cover:"article-10.jpg"},
-    {id:11,title:{en:"Fabric as Narrative",zh:"面料即叙事"},excerpt:{en:"Every textile carries a story of origin, process, and intention.",zh:"每一种纺织品都承载着关于起源、工艺与意图的故事。"},content:{en:"<p>Before a garment takes shape, the fabric already speaks. The weight of wool, the coolness of linen, the subtle irregularity of handwoven cotton — these are not just materials, they are the first chapter of the story.</p ><p>At Sean's STORE we choose fabrics that have something to say, and then we listen carefully to what they need to become.</p >",zh:"<p>在服装成形之前，面料已经在说话。羊毛的重量、亚麻的清凉、手织棉的细微不规则——这些不只是材料，它们是故事的第一章。</p ><p>在 Sean's STORE，我们选择那些有话要说的面料，然后仔细倾听它们想成为什么。</p >"},category:"sustainability",size:"small",date:"2026-09-18",cover:"article-11.jpg"},
-    {id:12,title:{en:"The Ritual of Getting Dressed",zh:"穿衣的仪式感"},excerpt:{en:"How the daily act of choosing clothes can become a moment of presence.",zh:"日常选择衣服的行为如何成为一刻的临在。"},content:{en:"<p>Getting dressed is one of the few remaining daily rituals that is still entirely ours. In a world of automation and acceleration, the quiet decision of what to put on the body can be a form of self-respect.</p ><p>When the clothes themselves reward attention — through texture, cut, and quality — the ritual deepens.</p >",zh:"<p>穿衣是少数仍然完全属于我们的日常仪式之一。在自动化与加速的世界里，决定把什么穿在身上，可以成为一种自我尊重。</p ><p>当衣服本身通过质感、剪裁和品质回报你的注意力时，这个仪式会变得更深。</p >"},category:"lifestyle",size:"medium",date:"2026-09-20",cover:"article-12.jpg"},
-    {id:13,title:{en:"Less, But Better — Revisited",zh:"少，但更好——再思考"},excerpt:{en:"Why the old maxim still holds, and how to practice it without austerity.",zh:"为什么这句老话依然成立，以及如何在不苦行的前提下实践它。"},content:{en:"<p>The phrase less but better is often reduced to minimalism as restriction. In truth, it is an invitation to intensity — fewer pieces, each one more resolved, more considered, more lasting.</p ><p>This is not about having little. It is about having enough of what truly matters.</p >",zh:"<p>少但更好这句话常被简化成一种限制性的极简。事实上，它是一种对强度的邀请——更少的单品，每一件都更完整、更被思考、更持久。</p ><p>这不是关于拥有很少，而是关于拥有真正重要的东西的足够。</p >"},category:"editorial",size:"large",date:"2026-09-22",cover:"article-13.jpg"},
-    {id:14,title:{en:"Colour as Emotion",zh:"色彩即情感"},excerpt:{en:"How restrained palettes can carry more feeling than bold statements.",zh:"克制的色盘如何比大胆的声明承载更多情感。"},content:{en:"<p>Strong colour announces. Soft colour invites. In the space between ivory, stone, and deep navy, there is room for mood, for memory, for the quiet shifts of a day.</p ><p>We work with colours that do not compete with the person wearing them, but accompany them.</p >",zh:"<p>强烈的色彩是宣告，柔和的色彩是邀请。在象牙白、石头色与深海军蓝之间，有情绪、有记忆、有一天中安静变化的空间。</p ><p>我们使用那些不与穿着者竞争，而是陪伴他们的颜色。</p >"},category:"style",size:"small",date:"2026-09-25",cover:"article-10.jpg"},
-    {id:15,title:{en:"The Weight of a Good Coat",zh:"一件好大衣的分量"},excerpt:{en:"Why outerwear remains the most architectural and lasting category in a wardrobe.",zh:"为什么外套仍然是衣橱中最具建筑感与持久性的类别。"},content:{en:"<p>A coat is the first and last thing the world sees. It has to hold weather, hold shape, and hold presence. When it is made well, it becomes less an item and more a companion across seasons.</p ><p>This is why we treat coats with particular care — in selection, in proportion, and in the stories we tell about them.</p >",zh:"<p>大衣是世界最先和最后看到的东西。它必须承受天气、保持形态、承载存在感。当它被做好时，它不再只是一件物品，而成为跨越季节的伴侣。</p ><p>这就是为什么我们特别慎重地对待大衣——在选择、在比例、在我们讲述的故事里。</p >"},category:"editorial",size:"medium",date:"2026-09-28",cover:"article-11.jpg"},
-    {id:16,title:{en:"Stillness in the Wardrobe",zh:"衣橱中的静"},excerpt:{en:"Creating space between pieces so that each one can be seen and valued.",zh:"在单品之间创造空间，让每一件都能被看见与珍惜。"},content:{en:"<p>A crowded closet makes every decision harder. Space — physical and mental — allows clothes to be chosen with intention rather than urgency.</p ><p>Editing is not subtraction for its own sake. It is the creation of clarity.</p >",zh:"<p>拥挤的衣橱让每一个决定都更难。空间——物理的和心理的——让衣服能被有意图地选择，而非在匆忙中决定。</p ><p>编辑不是为减而减，而是在创造清晰。</p >"},category:"lifestyle",size:"small",date:"2026-10-01",cover:"article-12.jpg"},
-    {id:17,title:{en:"Craft as Quiet Luxury",zh:"工艺即安静的奢华"},excerpt:{en:"The details you only notice when you live with a piece for years.",zh:"只有与一件作品相处多年后才会注意到的细节。"},content:{en:"<p>True craft does not shout. It reveals itself in the way a seam sits against the body, in the way a fabric ages, in the way a button is attached with care rather than speed.</p ><p>These are the qualities that turn clothing into something closer to inheritance.</p >",zh:"<p>真正的工艺并不喧哗。它显现在缝线贴合身体的方式里，显现在面料老化的方式里，显现在纽扣被用心而非匆忙缝上的方式里。</p ><p>这些品质让服装更接近于可以传承的东西。</p >"},category:"sustainability",size:"medium",date:"2026-10-05",cover:"article-13.jpg"}
-  ],
-  products: [
-    {id:1,name:{en:"Cashmere Overcoat",zh:"羊绒大衣"},category:{en:"Outerwear",zh:"外套"},price:"$1,280",oldPrice:"",tag:"Bestseller",cover:"article-5.jpg"},
-    {id:2,name:{en:"Silk Blend Blazer",zh:"丝绸混纺西装"},category:{en:"Tailoring",zh:"剪裁"},price:"$890",oldPrice:"$1,150",tag:"New",cover:"article-6.jpg"},
-    {id:3,name:{en:"Organic Cotton Shirt",zh:"有机棉衬衫"},category:{en:"Essentials",zh:"基础款"},price:"$240",oldPrice:"",tag:"",cover:"article-8.jpg"},
-    {id:4,name:{en:"Wool Wide-Leg Trousers",zh:"羊毛阔腿裤"},category:{en:"Bottoms",zh:"下装"},price:"$460",oldPrice:"",tag:"Limited",cover:"article-9.jpg"}
-  ],
-  settings: {whatsapp:"+86 183 6388 2260",email:"EstheerEagler@gmail.com",replyHours:"12",hours:"Mon — Sun · 9:00 — 21:00",mapEmbed:""}
-};
-      const I18N = {
-  en: {nav:{home:"Home",editorial:"Editorial",story:"Story",collection:"Collection",contact:"Contact"},hero:{eyebrow:"Curated Luxury · Sustainable Style",title1:"Where Taste Meets",title2:"Timeless Elegance",subtitle:"A curated destination for the modern connoisseur — sustainable fashion, editorial aesthetics, and pieces that tell a story.",cta:"Explore the Collection"},marquee:["Sustainable Fashion","Editorial Curation","Timeless Design","Artistic Aesthetics","Luxury Lifestyle"],editorial:{label:"Featured Editorial",title:"Stories That",titleEm:"Inspire",desc:"Thoughtful essays on style, culture, and the art of living well."},story:{label:"Our Story",title:"A Vision of",titleEm:"Intentional Luxury",p1:"Sean's STORE was born from a simple belief: that true luxury is found not in excess, but in curation.",p2:"Every item in our collection is chosen with intention.",f1t:"Curated Excellence",f1d:"Every piece hand-selected for quality and character.",f2t:"Sustainable First",f2d:"Ethical materials and responsible production always.",f3t:"Timeless Design",f3d:"Pieces that transcend seasons and trends.",badge:"Est. 2024"},collection:{label:"The Collection",title:"Pieces That",titleEm:"Define You",desc:"A carefully edited selection of garments and accessories."},stats:{s1n:"500+",s1l:"Curated Pieces",s2n:"50+",s2l:"Artisan Partners",s3n:"100%",s3l:"Sustainable",s4n:"12h",s4l:"Response Time"},testimonial:{quote:"Sean's STORE has redefined what sustainable luxury means to me. Every piece feels like a discovery.",name:"Isabella Chen",role:"Fashion Editor, VOGUE"},contact:{label:"Get in Touch",title:"Let's Start a",titleEm:"Conversation",desc:"Whether you have a question, need styling advice, or want to discuss a collaboration.",c1t:"WhatsApp",c2t:"Email",c3t:"Store Hours",promiseT:"12-Hour Response Promise",promiseD:"We reply to every message within 12 hours."},footer:{about:"A curated destination for sustainable luxury fashion.",nav:"Navigation",contact:"Contact",follow:"Follow Us",rights:"© 2026 Sean's STORE. All rights reserved.",privacy:"Privacy Policy"},cookie:{title:"We Value Your Privacy",text:"We use cookies to enhance your browsing experience.",accept:"Accept All",decline:"Decline"}},
-  zh: {nav:{home:"首页",editorial:"编辑精选",story:"品牌故事",collection:"精选系列",contact:"联系我们"},hero:{eyebrow:"精选奢华 · 可持续风格",title1:"品味与",title2:"永恒优雅的交汇",subtitle:"为现代鉴赏家打造的精选目的地——可持续时尚、编辑美学，以及有故事的作品。",cta:"探索精选系列"},marquee:["可持续时尚","编辑策展","永恒设计","艺术美学","奢华生活"],editorial:{label:"精选文章",title:"激发灵感的",titleEm:"故事",desc:"关于风格、文化和精致生活艺术的深度文章。"},story:{label:"品牌故事",title:"有意图的",titleEm:"奢华愿景",p1:"Sean's STORE 源于一个简单的信念：真正的奢华不在于过剩，而在于精选。",p2:"我们系列中的每一件都是有意选择的。",f1t:"精选卓越",f1d:"每一件都经过手工挑选，追求品质与个性。",f2t:"可持续优先",f2d:"始终使用道德材料和负责任的生产。",f3t:"永恒设计",f3d:"超越季节和潮流的作品。",badge:"创立于 2024"},collection:{label:"精选系列",title:"定义你的",titleEm:"作品",desc:"精心编辑的服装与配饰精选。"},stats:{s1n:"500+",s1l:"精选作品",s2n:"50+",s2l:"工匠合作伙伴",s3n:"100%",s3l:"可持续",s4n:"12小时",s4l:"响应时间"},testimonial:{quote:"Sean's STORE 重新定义了可持续奢华对我的意义。每一件作品都像一次发现。",name:"陈伊莎贝拉",role:"VOGUE 时尚编辑"},contact:{label:"联系我们",title:"让我们开始",titleEm:"对话",desc:"无论您对某件作品有疑问、需要造型建议，还是想讨论合作。",c1t:"WhatsApp",c2t:"电子邮箱",c3t:"营业时间",promiseT:"12小时回复承诺",promiseD:"我们在12小时内回复每一条消息。"},footer:{about:"可持续奢华时尚的精选目的地。",nav:"导航",contact:"联系方式",follow:"关注我们",rights:"© 2026 Sean's STORE 版权所有",privacy:"隐私政策"},cookie:{title:"我们重视您的隐私",text:"我们使用 Cookie 来增强您的浏览体验。",accept:"全部接受",decline:"拒绝"}}
-};
+      function renderNav() {
+        const nav = document.getElementById('navLinks');
+        const footerNav = document.getElementById('footerNav');
+        baseContent.navItems.forEach(item => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${item.href}">${item.label}</a>`;
+          nav.appendChild(li);
 
-let currentLang = localStorage.getItem('seans_lang') || 'en';
-let cmsData = null;
+          const footerLi = document.createElement('li');
+          footerLi.innerHTML = `<a href="${item.href}">${item.label}</a>`;
+          footerNav.appendChild(footerLi);
+        });
+      }
 
-function loadData(){const saved=localStorage.getItem('seans_cms_data');if(saved){try{cmsData=JSON.parse(saved)}catch(e){cmsData=JSON.parse(JSON.stringify(DEFAULT_DATA))}}else{cmsData=JSON.parse(JSON.stringify(DEFAULT_DATA))}}
-function saveData(){localStorage.setItem('seans_cms_data',JSON.stringify(cmsData))}
-function t(key){const keys=key.split('.');let val=I18N[currentLang];for(const k of keys){val=val?val[k]:undefined}return val||key}
-function getArticleField(a,f){return a[f]&&a[f][currentLang]?a[f][currentLang]:a[f].en}
-function getProductField(p,f){return p[f]&&p[f][currentLang]?p[f][currentLang]:p[f].en}
-function formatDate(d){if(!d)return'';const date=new Date(d);return currentLang==='zh'?`${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日`:date.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}
+      function renderMarquee() {
+        const track = document.getElementById('marqueeTrack');
+        const items = [...baseContent.marquee, ...baseContent.marquee];
+        items.forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'marquee-item';
+          div.textContent = item;
+          track.appendChild(div);
+        });
+      }
 
-function setLanguage(lang){currentLang=lang;localStorage.setItem('seans_lang',lang);document.documentElement.lang=lang==='zh'?'zh-CN':'en';renderAll();const btn=document.querySelector('.lang-btn');if(btn)btn.textContent=lang==='en'?'中文 / EN':'EN / 中文'}
-function toggleLanguage(){setLanguage(currentLang==='en'?'zh':'en')}
+      function renderEditorial() {
+        const grid = document.getElementById('editorialGrid');
+        baseContent.editorial.forEach((item, index) => {
+          const card = document.createElement('article');
+          const size = index === 0 ? 'large' : index === 1 ? 'medium' : index === 2 ? 'small' : 'wide';
+          card.className = `editorial-card ${size}`;
+          card.onclick = () => openModal(item);
+          card.innerHTML = `
+            <div class="editorial-card-img">
+              <img src="${item.image}" alt="${item.title}">
+            </div>
+            <div class="editorial-card-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="editorial-card-overlay">
+              <span class="editorial-card-cat">${item.category}</span>
+              <h3 class="editorial-card-title">${item.title}</h3>
+              <p class="editorial-card-excerpt">${item.excerpt}</p>
+              <div class="editorial-card-meta">
+                <span>${item.date}</span>
+                <span>${item.read}</span>
+              </div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
 
-function renderNav(){const n=t('nav');document.getElementById('navLinks').innerHTML=`<li><a href="#home" class="active">${n.home}</a></li><li><a href="#editorial">${n.editorial}</a></li><li><a href="#story">${n.story}</a></li><li><a href="#collection">${n.collection}</a></li><li><a href="#contact">${n.contact}</a></li>`;const m=document.getElementById('mobileMenu');if(m)m.innerHTML=`<button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button><a href="#home" onclick="closeMobileMenu()">${n.home}</a><a href="#editorial" onclick="closeMobileMenu()">${n.editorial}</a><a href="#story" onclick="closeMobileMenu()">${n.story}</a><a href="#collection" onclick="closeMobileMenu()">${n.collection}</a><a href="#contact" onclick="closeMobileMenu()">${n.contact}</a>`}
-function renderHero(){const h=t('hero');document.getElementById('heroEyebrow').textContent=h.eyebrow;document.getElementById('heroTitle1').textContent=h.title1;document.getElementById('heroTitle2').innerHTML=`<em>${h.title2}</em>`;document.getElementById('heroSubtitle').textContent=h.subtitle;document.getElementById('heroCta').innerHTML=`${h.cta} <i class="fas fa-arrow-right"></i>`}
-function renderMarquee(){const items=t('marquee');let html='';for(let i=0;i<2;i++){items.forEach(item=>{html+=`<span class="marquee-item">${item}</span>`})}document.getElementById('marqueeTrack').innerHTML=html}
-function renderEditorial(){const e=t('editorial');document.getElementById('editorialLabel').textContent=e.label;document.getElementById('editorialTitle').innerHTML=`${e.title} <em>${e.titleEm}</em>`;document.getElementById('editorialDesc').textContent=e.desc;const grid=document.getElementById('editorialGrid');let html='';cmsData.articles.forEach(a=>{const title=getArticleField(a,'title');const excerpt=getArticleField(a,'excerpt');const cat=a.category.charAt(0).toUpperCase()+a.category.slice(1);const cover=a.cover?`<img src="${a.cover}" alt="${title}" onerror="this.style.display='none'">`:'';html+=`<article class="editorial-card ${a.size||'medium'} reveal" onclick="openArticle(${a.id})"><div class="editorial-card-img">${cover}</div><div class="editorial-card-overlay"><span class="editorial-card-cat">${cat}</span><h3 class="editorial-card-title">${title}</h3><p class="editorial-card-excerpt">${excerpt}</p><div class="editorial-card-meta"><span>${formatDate(a.date)}</span></div></div><div class="editorial-card-arrow"><i class="fas fa-arrow-right"></i></div></article>`});grid.innerHTML=html;initReveal()}
-function renderStory(){const s=t('story');document.getElementById('storyLabel').textContent=s.label;document.getElementById('storyTitle').innerHTML=`${s.title} <em>${s.titleEm}</em>`;document.getElementById('storyP1').textContent=s.p1;document.getElementById('storyP2').textContent=s.p2;document.getElementById('storyF1t').textContent=s.f1t;document.getElementById('storyF1d').textContent=s.f1d;document.getElementById('storyF2t').textContent=s.f2t;document.getElementById('storyF2d').textContent=s.f2d;document.getElementById('storyF3t').textContent=s.f3t;document.getElementById('storyF3d').textContent=s.f3d;document.getElementById('storyBadge').textContent=s.badge}
-function renderCollection(){const c=t('collection');document.getElementById('collectionLabel').textContent=c.label;document.getElementById('collectionTitle').innerHTML=`${c.title} <em>${c.titleEm}</em>`;document.getElementById('collectionDesc').textContent=c.desc;const grid=document.getElementById('collectionGrid');let html='';cmsData.products.forEach(p=>{const name=getProductField(p,'name');const cat=getProductField(p,'category');const tag=p.tag?`<span class="product-tag">${p.tag}</span>`:'';const old=p.oldPrice?`<span>${p.oldPrice}</span>`:'';const cover=p.cover?`<img src="${p.cover}" alt="${name}" onerror="this.style.display='none'">`:'';html+=`<div class="product-card reveal"><div class="product-img">${tag}${cover}</div><div class="product-info"><div class="product-cat">${cat}</div><h3 class="product-name">${name}</h3><div class="product-price">${old}${p.price}</div></div></div>`});grid.innerHTML=html;initReveal()}
-function renderStats(){const s=t('stats');['1','2','3','4'].forEach(i=>{document.getElementById('stat'+i+'n').textContent=s['s'+i+'n'];document.getElementById('stat'+i+'l').textContent=s['s'+i+'l']})}
-function renderTestimonial(){const tm=t('testimonial');document.getElementById('testimonialQuote').textContent=tm.quote;document.getElementById('testimonialName').textContent=tm.name;document.getElementById('testimonialRole').textContent=tm.role}
-function renderContact(){const c=t('contact');const s=cmsData.settings;document.getElementById('contactLabel').textContent=c.label;document.getElementById('contactTitle').innerHTML=`${c.title} <em>${c.titleEm}</em>`;document.getElementById('contactDesc').textContent=c.desc;document.getElementById('contactWhatsapp').innerHTML=`<a href="https://wa.me/${s.whatsapp.replace(/[^0-9]/g,'')}" target="_blank">${s.whatsapp}</a>`;document.getElementById('contactEmail').innerHTML=`<a href="mailto:${s.email}">${s.email}</a>`;document.getElementById('contactHours').textContent=s.hours;document.getElementById('contactC1t').textContent=c.c1t;document.getElementById('contactC2t').textContent=c.c2t;document.getElementById('contactC3t').textContent=c.c3t;document.getElementById('promiseT').textContent=`${s.replyHours}-Hour Response Promise`;document.getElementById('promiseD').textContent=c.promiseD;const map=document.getElementById('contactMap');if(map){if(s.mapEmbed){map.innerHTML=`<iframe src="${s.mapEmbed}" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`}else{map.innerHTML=`<div class="map-placeholder"><div><i class="fas fa-map-marker-alt"></i><p style="color:rgba(255,255,255,0.4);font-size:0.85rem;">Google Map — configure in admin panel</p></div></div>`}}}
-function renderFooter(){const f=t('footer');const s=cmsData.settings;const n=t('nav');document.getElementById('footerAbout').textContent=f.about;document.getElementById('footerNavTitle').textContent=f.nav;document.getElementById('footerContactTitle').textContent=f.contact;document.getElementById('footerFollowTitle').textContent=f.follow;document.getElementById('footerRights').textContent=f.rights;document.getElementById('footerPrivacyLink').textContent=f.privacy;document.getElementById('footerNav').innerHTML=`<li><a href="#home">${n.home}</a></li><li><a href="#editorial">${n.editorial}</a></li><li><a href="#story">${n.story}</a></li><li><a href="#collection">${n.collection}</a></li><li><a href="#contact">${n.contact}</a></li>`;document.getElementById('footerContactInfo').innerHTML=`<li><a href="https://wa.me/${s.whatsapp.replace(/[^0-9]/g,'')}" target="_blank"><i class="fab fa-whatsapp"></i> ${s.whatsapp}</a></li><li><a href="mailto:${s.email}"><i class="fas fa-envelope"></i> ${s.email}</a></li>`}
-function renderCookie(){const c=t('cookie');document.getElementById('cookieTitle').textContent=c.title;document.getElementById('cookieText').innerHTML=`${c.text} <a href="#privacy">${t('footer.privacy')}</a>`;document.getElementById('cookieAccept').textContent=c.accept;document.getElementById('cookieDecline').textContent=c.decline}
-function renderAll(){renderNav();renderHero();renderMarquee();renderEditorial();renderStory();renderCollection();renderStats();renderTestimonial();renderContact();renderFooter();renderCookie();updateMetaTags()}
-function updateMetaTags(){const lang=currentLang==='zh'?'zh-CN':'en';document.documentElement.lang=lang;document.title=currentLang==='zh'?"Sean's STORE — 可持续奢华时尚杂志":"Sean's STORE — Sustainable Luxury Fashion Magazine"}
+      function renderProducts() {
+        const grid = document.getElementById('collectionGrid');
+        baseContent.products.forEach((product) => {
+          const card = document.createElement('article');
+          card.className = 'product-card';
+          card.innerHTML = `
+            <div class="product-img">
+              <img src="${product.image}" alt="${product.name}">
+              <span class="product-tag">${product.tag}</span>
+            </div>
+            <div class="product-info">
+              <div class="product-cat">${product.category}</div>
+              <div class="product-name">${product.name}</div>
+              <div class="product-price"><span>${product.oldPrice}</span>${product.price}</div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
 
-function openArticle(id){const a=cmsData.articles.find(x=>x.id===id);if(!a)return;const title=getArticleField(a,'title');const content=getArticleField(a,'content');const cat=a.category.charAt(0).toUpperCase()+a.category.slice(1);const cover=a.cover?`<img src="${a.cover}" alt="${title}">`:'';document.getElementById('modalCover').innerHTML=cover;document.getElementById('modalCat').textContent=cat;document.getElementById('modalTitle').textContent=title;document.getElementById('modalDate').textContent=formatDate(a.date);document.getElementById('modalContent').innerHTML=content;document.getElementById('articleModal').classList.add('open');document.body.style.overflow='hidden'}
-function closeArticle(){document.getElementById('articleModal').classList.remove('open');document.body.style.overflow=''}
-function openMobileMenu(){document.getElementById('mobileMenu').classList.add('open');document.body.style.overflow='hidden'}
-function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open');document.body.style.overflow=''}
-function showCookieBanner(){if(!localStorage.getItem('seans_cookie_consent')){setTimeout(()=>{document.getElementById('cookieBanner').classList.add('show')},1500)}}
-function acceptCookies(){localStorage.setItem('seans_cookie_consent','accepted');document.getElementById('cookieBanner').classList.remove('show')}
-function declineCookies(){localStorage.setItem('seans_cookie_consent','declined');document.getElementById('cookieBanner').classList.remove('show')}
-function initReveal(){const reveals=document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale');const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});reveals.forEach(el=>observer.observe(el))}
-function initNavbarScroll(){const navbar=document.querySelector('.navbar');const navLinks=document.querySelectorAll('.nav-links a');const sections=document.querySelectorAll('section[id]');window.addEventListener('scroll',()=>{if(window.scrollY>50){navbar.classList.add('scrolled')}else{navbar.classList.remove('scrolled')}let current='';sections.forEach(section=>{const sectionTop=section.offsetTop-120;if(window.scrollY>=sectionTop)current=section.getAttribute('id')});navLinks.forEach(link=>{link.classList.remove('active');if(link.getAttribute('href')===`#${current}`)link.classList.add('active')})})}
-function initSmoothScroll(){document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const target=document.querySelector(this.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}})})}
+      function renderFooterContact() {
+        const footerContactInfo = document.getElementById('footerContactInfo');
+        const info = [
+          '<li><a href="tel:+8618363882260">+86 183 6388 2260</a></li>',
+          '<li><a href="mailto:EstheerEagler@gmail.com">EstheerEagler@gmail.com</a></li>',
+          '<li><span>Mon–Sun · 9:00–21:00</span></li>'
+        ];
+        footerContactInfo.innerHTML = info.join('');
+      }
 
-document.addEventListener('DOMContentLoaded',()=>{loadData();setLanguage(currentLang);initNavbarScroll();initSmoothScroll();initReveal();showCookieBanner();document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeArticle();closeMobileMenu()}});document.getElementById('articleModal').addEventListener('click',e=>{if(e.target.id==='articleModal')closeArticle()})});
+      function openModal(item) {
+        const modal = document.getElementById('articleModal');
+        document.getElementById('modalImage').src = item.image;
+        document.getElementById('modalCat').textContent = item.category;
+        document.getElementById('modalTitle').textContent = item.title;
+        document.getElementById('modalMetaDate').textContent = item.date;
+        document.getElementById('modalMetaRead').textContent = item.read;
+        document.getElementById('modalContent').innerHTML = item.content;
+        modal.classList.add('open');
+      }
+
+      function closeModal() {
+        document.getElementById('articleModal').classList.remove('open');
+      }
+
+      function initReveal() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+          });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+      }
+
+      function handleScroll() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 20) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+      }
+
+      function toggleLanguage() {
+        const english = document.querySelectorAll('#heroTitle1, #heroSubtitle, #editorialLabel, #editorialTitle, #editorialDesc, #storyLabel, #storyTitle, #storyP1, #storyP2, #storyF1t, #storyF1d, #storyF2t, #storyF2d, #storyF3t, #storyF3d, #collectionLabel, #collectionTitle, #collectionDesc, #contactLabel, #contactTitle, #contactDesc, #contactC1t, #contactC2t, #contactC3t, #promiseT, #promiseD, #footerNavTitle, #footerContactTitle, #footerFollowTitle, #footerAbout');
+        const chinese = document.querySelectorAll('#heroEyebrow, #heroTitle2, #storyBadge, #manifestoText, #manifestoAuthor, #contactWhatsapp, #contactEmail, #contactHours, #testimonialQuote, #testimonialName, #testimonialRole, #stat1l, #stat2l, #stat3l, #stat4l');
+        english.forEach(el => { el.lang = 'en'; });
+        chinese.forEach(el => { el.lang = 'zh'; });
+      }
+
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('open');
+      }
+
+      function acceptCookies() {
+        document.getElementById('cookieBanner').classList.remove('show');
+      }
+
+      function declineCookies() {
+        document.getElementById('cookieBanner').classList.remove('show');
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('click', function (event) {
+        const modal = document.getElementById('articleModal');
+        if (event.target === modal) closeModal();
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        renderNav();
+        renderMarquee();
+        renderEditorial();
+        renderProducts();
+        renderFooterContact();
+        initReveal();
+        handleScroll();
+        const banner = document.getElementById('cookieBanner');
+        banner.classList.add('show');
+        const mobileNav = document.getElementById('mobileMenu');
+        const navList = document.getElementById('navLinks');
+        mobileNav.innerHTML = navList.innerHTML + '<button class="mobile-close" onclick="document.getElementById(\'mobileMenu\').classList.remove(\'open\')"><i class="fas fa-times"></i></button>';
+      });
     </script>
 </body>
 </html>
